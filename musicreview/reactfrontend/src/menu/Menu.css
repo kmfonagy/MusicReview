@@ -1,0 +1,39 @@
+.Menu {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.MenuSide {
+    margin: 0.5rem;
+}
+
+.MenuMain {
+    max-width: 80%;
+    margin: 0.5rem;
+}
+
+.MenuSearch {
+    justify-content: space-evenly;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.MenuBar {
+    width: 70%;
+    color: #000000;
+    border-color: #4E6891;
+}
+
+.MenuSearch Button {
+    width: 20%;
+    background-color: #4E6891;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.MenuSearch Button:hover {
+    background-color: #555555;
+    border-radius: 0;
+}
