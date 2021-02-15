@@ -1,0 +1,13 @@
+.MenuAlbums {
+    justify-content: left;
+    align-content: left;
+    display: flex;
+    padding: 1.5em;
+    max-width: 100%;
+}
+
+.AlbumCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
