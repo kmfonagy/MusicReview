@@ -1,44 +1,59 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "App.css";
+import "./login.css";
 
-export default function Login() {
-    const [userName, setUserName] = useState("");
-    const [password, setPassword] = useState("");
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            username: '',
+            password: '',
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+    }
+
+    handleClick = () => {
+        console.log('Logging in...');
+    }
+
+    render() {
+        return (
+            <div className="Login">
+                <Form onSubmit={this.handleSubmit}>
+                    <label>
+                        Username: 
+                        <input 
+                            type="text"
+                            value={this.username}
+                            onChange={this.handleChange} />
+                    </label>
+                    <br />
+                    <label>
+                        Password: 
+                        <input 
+                            type="text"
+                            value={this.password}
+                            onChange={this.handleChange} />
+                    </label>
+                </Form>
+                <Button onClick={this.handleClick}>
+                        Login
+                </Button>
+            </div>
+        )
+    }
 }
 
-function validateForm() {
-    return userName.length > 0 && password.length > 0;
-}
-
-function handleSubmit(event) {
-    event.preventDefault();
-}
-
-return (
-    <div className="Login">
-        <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="userName">
-                <Form.Label>userName</Form.Label>
-                <Form.Control
-                    autoFocus
-                    type="userName"
-                    value={userName}
-                    onChange={(u) => setUserName(u.target.value)}
-                />
-            </Form.Group>
-            <Form.Group controlId="password">
-            <Form.Label>userName</Form.Label>
-                <Form.Control
-                    type="password"
-                    value={password}
-                    onChange={(p) => setPassword(p.target.value)}
-                />
-            </Form.Group>
-            <Button type="submit" disabled={!validateForm()}>
-                Login
-            </Button>
-        </Form>
-    </div>
-)
+export default Login;
