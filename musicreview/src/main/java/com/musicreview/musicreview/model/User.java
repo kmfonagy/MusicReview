@@ -17,6 +17,9 @@ public class User {
     private Integer id;
 
     @Column
+    private String email;
+
+    @Column
     private String username;
 
     @Column
@@ -24,12 +27,20 @@ public class User {
 
     @Override
     public String toString() {
-        return "User ID = " + id + " " + "Username = " + username + " " + "Password = " + password;
+        return "User ID = " + id + " " + "User Email = " + email + " " +  "Username = " + username + " " + "Password = " + password;
     }
 
     public Integer getId() {
         return id;
     }
+
+    public String getEmail() {
+        return email; 
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    } 
 
     public String getName() {
         return username;
@@ -46,4 +57,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
