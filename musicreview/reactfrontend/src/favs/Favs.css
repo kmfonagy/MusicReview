@@ -1,0 +1,21 @@
+.Favs {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.FavsSide {
+    margin: 0.5rem;
+}
+
+.FavsMain {
+    max-width: 80%;
+    margin: 0.5rem;
+}
+
+.FavsHeader {
+    width: 20%;
+    background-color: #4E6891;
+    color: #ffffff;
+    border-radius: 0;
+}
