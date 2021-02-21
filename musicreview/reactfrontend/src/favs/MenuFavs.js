@@ -59,6 +59,7 @@ class MenuFavs extends Component {
 
         ]
     };
+    
     render() {
         return(
             <div className="FavAlbums">

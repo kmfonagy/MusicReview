@@ -1,0 +1,49 @@
+.RevAlbumMain {
+    justify-content: space-between;
+    align-content: left;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
+.RevAlbumImg {
+    width: 20rem;
+    justify-self: center;
+}
+
+.RevAlbumInfo {
+    justify-content: space-between;
+    align-content: left;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.RevAlbumTitle {
+    font-size: x-large;
+}
+
+.RevAlbumDetails {
+    justify-content: space-between;
+    align-content: left;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+.RevAlbumDetails:first-child {
+    font-size: medium;
+}
+
+.RevAlbumLine {
+    justify-content: space-between;
+    align-content: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.RevAlbumLine:first-child {
+    text-align: right;
+    width: 5rem;
+}
