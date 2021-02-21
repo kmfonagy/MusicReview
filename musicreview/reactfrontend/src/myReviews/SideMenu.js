@@ -7,16 +7,16 @@ class SideMenu extends Component {
         return (
             <div className="sideMenu">
                 <div className="buttons">
-                    <Button>Back</Button>
+                    <Button className="href" href="./Menu/Menu">Back</Button>
                     <Button>My Favorites</Button>
-                    <Button>My Reviews</Button>
+                    <Button className="href" href="./myReviews/MyReviews">My Reviews</Button>
                 </div>
                 <div className="userInfo">
                     <p>User Information</p>
                 </div>
                 <div className="logout">
                     <p>Username</p>
-                    <Button>Logout Button</Button>
+                    <Button href="./login/login">Logout Button</Button>
                     <br />
                 </div>
             </div>

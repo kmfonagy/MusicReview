@@ -9,6 +9,10 @@
     max-width: 30rem;
 }
 
+.href {
+    font: #ffffff;
+}
+
 .buttons {
     background-color: #1E2838;
     justify-content: center;

@@ -33,22 +33,23 @@ class Login extends Component {
             <div className="Login">
                 <Form onSubmit={this.handleSubmit}>
                     <label>
-                        Username: 
-                        <input 
-                            type="text"
-                            value={this.username}
-                            onChange={this.handleChange} />
+                        Please enter your login information
                     </label>
                     <br />
-                    <label>
-                        Password: 
-                        <input 
-                            type="text"
-                            value={this.password}
-                            onChange={this.handleChange} />
-                    </label>
+                    <input 
+                        className="input"
+                        type="text"
+                        value="Username"
+                        onChange={this.handleChange} />
+                    <br />
+                    <input 
+                        className="input"
+                        type="text"
+                        value="Password"
+                        onChange={this.handleChange} />
+                    <br />
                 </Form>
-                <Button onClick={this.handleClick}>
+                <Button>
                         Login
                 </Button>
             </div>
