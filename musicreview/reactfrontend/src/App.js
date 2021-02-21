@@ -1,11 +1,13 @@
 // import Menu from './menu/Menu';
-import Favs from './favs/Favs';
+// import Favs from './favs/Favs';
+import Review from './review/Review';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Favs />
+      <Review />
+      {/* <Favs /> */}
       {/* <Menu /> */}
     </div>
   );

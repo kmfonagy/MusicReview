@@ -1,0 +1,64 @@
+.MenuRev {
+    justify-content: space-between;
+    align-content: left;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: auto;
+}
+
+.MenuRevAlbum {
+    width: auto;
+    min-width: 40rem;
+}
+
+.MenuRevStarTitle {
+    justify-content: space-evenly;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.RevStar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: .5rem 1rem;
+    width: 10rem;
+    background-color: #335080;
+    margin: .5em 0;
+}
+
+.TitleBlock {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    margin: .5em 0;
+}
+
+.RevTitle {
+    padding: .5rem 1rem;
+    color: #4E6891;
+}
+
+.TitleField {
+    background-color: #ffffff;
+    border: 2px solid #335080;
+    border-radius: 0;
+    padding: 0 .5rem;
+    width: 20rem;
+    text-align: center;
+    font-size: large;
+}
+
+.MenuRevDesc {
+    background-color: #ffffff;
+    border: 2px solid #335080;
+    border-radius: 0;
+    width: auto;
+    font-family: Roboto;
+    font-size: 1.2rem;
+}

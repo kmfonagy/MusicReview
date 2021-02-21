@@ -1,0 +1,18 @@
+.Review {
+    justify-content: right;
+    align-content: right;
+    display: flex;
+}
+
+.ReviewSide {
+    margin: 0.5rem;
+    flex-direction: row;
+}
+
+.ReviewMain {
+    justify-content: center;
+    align-content: center;
+    min-width: 40%;
+    margin: 0.5rem;
+    flex-direction: column;
+}

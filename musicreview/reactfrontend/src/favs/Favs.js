@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SideFavs from './SideFavs';
 import MenuFavs from './MenuFavs';
-import { Grid, FormColumn } from '@material-ui/core';
 import './Favs.css';
 
 class Menu extends Component {

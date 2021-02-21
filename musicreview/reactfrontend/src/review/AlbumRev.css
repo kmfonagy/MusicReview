@@ -1,49 +1,63 @@
 .RevAlbumMain {
-    justify-content: space-between;
     align-content: left;
     display: flex;
     flex-direction: row;
-    width: auto;
+    width: fit-content;
+    color: #4E6891;
 }
 
 .RevAlbumImg {
-    width: 20rem;
+    display: flex;
+    width: auto;
+    max-width: 20rem;
     justify-self: center;
+    margin-right: 1rem;
 }
 
 .RevAlbumInfo {
-    justify-content: space-between;
+    justify-content: top;
     align-content: left;
     display: flex;
     flex-direction: column;
     width: auto;
-}
-
-.RevAlbumTitle {
-    font-size: x-large;
-}
-
-.RevAlbumDetails {
-    justify-content: space-between;
-    align-content: left;
-    display: flex;
-    flex-direction: column;
-    font-size: small;
-}
-
-.RevAlbumDetails:first-child {
-    font-size: medium;
-}
-
-.RevAlbumLine {
-    justify-content: space-between;
-    align-content: left;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.RevAlbumLine:first-child {
+.RevAlbumTitle {
+    font-size: 2em;
+    margin-bottom: .25em;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.RevAlbumDetails {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    width: auto;
+    margin-top: 1.5rem
+}
+
+.RevAlbumLine {
+    justify-content: left;
+    align-content: left;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .15em;
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+.RevAlbumLineDesc {
+    width: 5.7em;
     text-align: right;
-    width: 5rem;
+    margin-right: .5em;
+}
+
+.RevAlbumLineFill {
+    display: flex;
+    flex-wrap: wrap;
+    width: 6em;
 }

@@ -3,8 +3,9 @@ import AlbumRev from './AlbumRev';
 import ReviewStar from './ReviewStar';
 import { Button, TextField } from '@material-ui/core';
 import './MenuRev.css';
+import { RotateRightSharp } from '@material-ui/icons';
 
-class MenuFavs extends Component {
+class MenuRev extends Component {
     // Can be deleted once connected to database
     static defaultProps = {
         music : [
@@ -14,21 +15,18 @@ class MenuFavs extends Component {
                 artist: 'Foo Fighters',
                 release_date: '02/12/2021',
                 duration: '00:37',
-                rating: 5,
+                rating: 3,
                 genre: 'Rock',
                 img: 'https://media.pitchfork.com/photos/5ff365a123155174547abec2/1:1/w_320/Foo-Fighters.jpg'
             }
 
-        ]
-    };
-
-    static defaultProps = {
+        ],
         review : [
             {
                 id: 1,
-                title: 'Medicine at Midnight',
-                description: 'Foo Fighters',
-                created_on: '02/18/2021'
+                title: `Great work Fighters!`,
+                description: `It's the zippiest Foos album to date. ... As a modern rock melting pot, Medicine certainly sounds like a spirit rediscovered.`,
+                created_on: `02/18/2021`
             }
 
         ]
@@ -39,36 +37,50 @@ class MenuFavs extends Component {
             <div className="MenuRev">
                 <div className="MenuRevAlbum">
                     {this.props.music.map((p) => (
-						<AlbumRev id={p.id} title={p.title} artist={p.artist} img={p.img} />
+						<AlbumRev
+                            id={p.id}
+                            img={p.img}
+                            title={p.title}
+                            artist={p.artist}
+                            duration={p.duration}
+                            release_date={p.release_date}
+                            genre={p.genre}
+                        />
 					))}
                 </div>
                 <div className="MenuRevStarTitle">
-                    {this.props.music.map((p) => (
-                        <ReviewStar id={p.id} rating={p.rating} />
-                    ))}
-                    <TextField id="outlined-basic" label="Title" variant="outlined" value={this.props.review.title} />
+                    <div  className="RevStar">
+                        {this.props.music.map((p) => (
+                            <ReviewStar id={p.id} stars={p.rating} />
+                        ))}
+                    </div>
+                    <div className="TitleBlock">
+                        <div className="RevTitle">
+                            Title: 
+                        </div>
+                        {this.props.review.map((p) => (
+                            <input className='TitleField' id="search" name="search" value={p.title}></input>
+                        ))}
+                    </div>
                 </div>
-                <div className="MenuRevDesc">
-                    {this.props.review.map((p) => (
-                        <TextField
-                            id="outlined-textarea"
-                            label="Description"
-                            placeholder="Description"
-                            multiline
-                            variant="outlined"
-                            rowsMax={4}
-                            value={p.description}
-                            onChange={handleChange}
-                        />
-                    ))}
-                </div>
-                <div className="MenuRevButtons">
+                {this.props.review.map((p) => (
+                    <textarea
+                        className="MenuRevDesc"
+                        id="outlined-textarea"
+                        label="Description"
+                        variant="outlined"
+                        rows="8"
+                        value={p.description}
+                        // onChange={handleChange}
+                    ></textarea>
+                ))}
+                {/* <div className="MenuRevButtons">
                     <div className="CreatedOn">
                         created: {this.props.review.created_on}
                     </div>
                     <Button id="review-clear">Clear</Button>
                     <Button id="review-submit">Submit</Button>
-                </div>
+                </div> */}
             </div>
         )
     }
