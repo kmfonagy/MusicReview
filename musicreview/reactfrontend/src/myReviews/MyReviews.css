@@ -14,8 +14,9 @@
 }
 
 h1 {
-    width: 20%;
+    width: 100%;
     background-color: #4E6891;
     color: #ffffff;
     border-radius: 0;
+    text-align: center;
 }

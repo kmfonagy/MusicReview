@@ -40,7 +40,7 @@
     height: 70%;
 }
 
-.logout {
+.logout p {
     background-color: inherit;
     justify-content: center;
     align-self: baseline;

@@ -8,7 +8,7 @@ class SideMenu extends Component {
             <div className="sideMenu">
                 <div className="buttons">
                     <Button>Back</Button>
-                    <Button>My Favorites</Button>'
+                    <Button>My Favorites</Button>
                     <Button>My Reviews</Button>
                 </div>
                 <div className="userInfo">
@@ -17,6 +17,7 @@ class SideMenu extends Component {
                 <div className="logout">
                     <p>Username</p>
                     <Button>Logout Button</Button>
+                    <br />
                 </div>
             </div>
         )
