@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Album from './Menu/Album';
+import Album from '../menu/Album';
 import './MenuFavs.css';
 
-class MenuAlbums extends Component {
+class MenuFavs extends Component {
     // Can be deleted once connected to database
     static defaultProps = {
         music : [

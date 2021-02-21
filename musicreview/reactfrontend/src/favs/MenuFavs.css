@@ -1,13 +1,14 @@
 .FavAlbums {
-    justify-content: left;
+    justify-content: center;
     align-content: left;
-    display: flex;
+    display: grid;
     padding: 1.5em;
-    max-width: 100%;
+    width: auto;
 }
 
 .AlbumCards {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 0 0 .25em;
 }
