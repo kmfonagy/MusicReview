@@ -13,7 +13,7 @@ class AlbumRev extends Component {
                     <div className="RevAlbumTitle">{this.props.title}</div>
                     <div className="RevAlbumDetails">
                         <div className="RevAlbumLine">
-                            <div className="RevAlbumLineDesc RevAlbumFillA">by:</div>
+                            <div className="RevAlbumLineDesc RevAlbumFillA">artist:</div>
                             <div className="RevAlbumLineFill RevAlbumArtist">{this.props.artist}</div>
                         </div>
                         <div className="RevAlbumLine">
@@ -21,7 +21,7 @@ class AlbumRev extends Component {
                             <div className="RevAlbumLineFill">{this.props.genre}</div>
                         </div>
                         <div className="RevAlbumLine">
-                            <div className="RevAlbumLineDesc">release date:</div>
+                            <div className="RevAlbumLineDesc">released:</div>
                             <div className="RevAlbumLineFill">{this.props.release_date}</div>
                         </div>
                         <div className="RevAlbumLine">

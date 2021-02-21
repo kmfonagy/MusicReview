@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AlbumRev from './AlbumRev';
 import ReviewStar from './ReviewStar';
-import { Button, TextField } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import './MenuRev.css';
 import { RotateRightSharp } from '@material-ui/icons';
 
@@ -15,7 +15,7 @@ class MenuRev extends Component {
                 artist: 'Foo Fighters',
                 release_date: '02/12/2021',
                 duration: '00:37',
-                rating: 3,
+                rating: 4,
                 genre: 'Rock',
                 img: 'https://media.pitchfork.com/photos/5ff365a123155174547abec2/1:1/w_320/Foo-Fighters.jpg'
             }
@@ -25,7 +25,7 @@ class MenuRev extends Component {
             {
                 id: 1,
                 title: `Great work Fighters!`,
-                description: `It's the zippiest Foos album to date. ... As a modern rock melting pot, Medicine certainly sounds like a spirit rediscovered.`,
+                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis dapibus egestas. Fusce a urna sed nunc tincidunt rhoncus. Nunc quis ex at felis auctor dapibus. In varius aliquam metus eget tempor. Ut auctor eros id ligula facilisis tincidunt. Etiam consectetur quis massa in eleifend. Vivamus non turpis dapibus, rutrum nibh eget, accumsan ante.`,
                 created_on: `02/18/2021`
             }
 
@@ -74,13 +74,15 @@ class MenuRev extends Component {
                         // onChange={handleChange}
                     ></textarea>
                 ))}
-                {/* <div className="MenuRevButtons">
-                    <div className="CreatedOn">
-                        created: {this.props.review.created_on}
+                <div className="MenuRevButtons">
+                    {this.props.review.map((p) => (
+                        <Typography className="CreatedOn">created: {p.created_on}</Typography>
+                    ))}
+                    <div className="ButtonBlock">
+                        <Button id="review-clear">Clear</Button>
+                        <Button id="review-submit">Submit</Button>
                     </div>
-                    <Button id="review-clear">Clear</Button>
-                    <Button id="review-submit">Submit</Button>
-                </div> */}
+                </div>
             </div>
         )
     }
