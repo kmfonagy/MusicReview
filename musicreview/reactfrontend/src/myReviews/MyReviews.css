@@ -1,0 +1,21 @@
+.myReviews {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.sideMenu {
+    margin: 0.5rem;
+}
+
+.myReviewsMain {
+    max-width: 80%;
+    margin: 0.5rem;
+}
+
+h1 {
+    width: 20%;
+    background-color: #4E6891;
+    color: #ffffff;
+    border-radius: 0;
+}
