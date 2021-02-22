@@ -1,11 +1,10 @@
-.LoginMain {
+.Login {
     background-color: #1E2838;
     justify-content: center;
     align-content: center;
     display: flex;
     flex-direction: column;
-    max-width: 10rem;
-    margin-bottom: .5em;
+
 }
 
 .Login Button {
@@ -18,4 +17,8 @@
 .Login Button:hover {
     background-color: #555555;
     border-radius: 0;
+}
+
+.Login Form {
+    justify-content: center;
 }

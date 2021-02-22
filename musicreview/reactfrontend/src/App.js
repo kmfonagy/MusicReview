@@ -1,5 +1,6 @@
 import Menu from './menu/Menu';
 import Login from "./login/login";
+import MyReviews from "./myReviews/MyReviews"
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       <Menu />
+      <MyReviews />
     </div>
   );
 }
