@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import { Button } from '@material-ui/core';
 import "./login.css";
 
 class Login extends Component {
@@ -17,7 +17,7 @@ class Login extends Component {
     }
 
     handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({ value: event.target.value });
     }
 
     handleSubmit(event) {
@@ -33,23 +33,23 @@ class Login extends Component {
             <div className="Login">
                 <Form onSubmit={this.handleSubmit}>
                     <label>
-                        Username: 
-                        <input 
+                        Username:
+                        <input
                             type="text"
                             value={this.username}
                             onChange={this.handleChange} />
                     </label>
                     <br />
                     <label>
-                        Password: 
-                        <input 
-                            type="text"
+                        Password:
+                        <input
+                            type="password"
                             value={this.password}
                             onChange={this.handleChange} />
                     </label>
                 </Form>
                 <Button onClick={this.handleClick}>
-                        Login
+                    Login
                 </Button>
             </div>
         )
