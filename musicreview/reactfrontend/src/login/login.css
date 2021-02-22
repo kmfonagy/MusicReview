@@ -1,0 +1,24 @@
+.Login {
+    background-color: #1E2838;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Login Button {
+    width: 20%;
+    background-color: #4E6891;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.Login Button:hover {
+    background-color: #555555;
+    border-radius: 0;
+}
+
+.Login Form {
+    justify-content: center;
+}

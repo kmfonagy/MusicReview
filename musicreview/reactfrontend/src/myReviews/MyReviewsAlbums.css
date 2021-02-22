@@ -1,0 +1,13 @@
+.albums {
+    justify-content: left;
+    align-content: left;
+    display: flex;
+    padding: 1.5em;
+    max-width: 100%;
+}
+
+.albumCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
