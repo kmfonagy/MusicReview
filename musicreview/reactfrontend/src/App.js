@@ -13,9 +13,6 @@ const App = () => {
         <Route exact path='/' component={Login} />
         <Route path='/menu' component={Menu} />
       </Switch>
-
-
-      { /* <MyReviews /> */}
     </div>
   );
 }

@@ -1,7 +1,7 @@
-.MenuAlbums {
-    justify-content: left;
+.FavAlbums {
+    justify-content: center;
     align-content: left;
-    display: flex;
+    display: grid;
     padding: 1.5em;
     width: auto;
 }
