@@ -2,13 +2,15 @@ import Menu from './menu/Menu';
 import Login from "./login/login";
 import MyReviews from "./myReviews/MyReviews"
 import './App.css';
+import { Route } from "react-router-dom"
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      {/* <Login /> */}
-      <Menu />
-      <MyReviews />
+      <Route path='/menu' component={Menu} />
+      {/*Keep at bottom */} <Route path='/' component={Login} />
+
+      { /* <MyReviews /> */}
     </div>
   );
 }

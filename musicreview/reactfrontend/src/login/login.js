@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 import Form from "react-bootstrap/Form";
 import { Button } from '@material-ui/core';
 import "./login.css";
@@ -49,9 +50,11 @@ class Login extends Component {
                         onChange={this.handleChange} />
                     <br />
                 </Form>
-                <Button>
-                    Login
-                </Button>
+                <Link to="/menu" style={{ textDecoration: 'none' }}>
+                    <Button variant="contained" color="secondary">
+                        Login
+                    </Button>
+                </Link>
             </div>
         )
     }
