@@ -1,14 +1,19 @@
 import Menu from './menu/Menu';
 import Login from "./login/login";
-import MyReviews from "./myReviews/MyReviews"
+import MyReviews from "./myReviews/MyReviews";
 import './App.css';
-import { Route } from "react-router-dom"
+import { Route } from "react-router-dom";
+import { Switch } from "react-router";
+
 
 const App = () => {
   return (
     <div className="App">
-      <Route path='/menu' component={Menu} />
-      {/*Keep at bottom */} <Route path='/' component={Login} />
+      <Switch>
+        <Route exact path='/' component={Login} />
+        <Route path='/menu' component={Menu} />
+      </Switch>
+
 
       { /* <MyReviews /> */}
     </div>
