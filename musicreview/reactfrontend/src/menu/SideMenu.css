@@ -26,14 +26,6 @@
     box-shadow: none;
 }
 
-Button {
-    color: #ffffff;
-}
-
-#favBtn {
-    font: #ffffff;
-}
-
 .UserBtns Button:hover {
     background-color: #335080;
 }
