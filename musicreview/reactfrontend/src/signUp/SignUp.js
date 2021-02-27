@@ -10,7 +10,7 @@ class SignUp extends Component {
             <div className="SignUp">
                 <Form onSubmit={this.handleSubmit}>
                     <label>
-                        Please enter your login information
+                        Create Account, <br /> Sign up to get started!
                     </label>
                     <br />
                     <input
@@ -21,12 +21,17 @@ class SignUp extends Component {
                     <input
                         className="input"
                         type="text"
+                        value="Email Address" />
+                    <br />
+                    <input
+                        className="input"
+                        type="text"
                         value="Password"/>
                     <br />
                 </Form>
                 <Link to="/menu" style={{ textDecoration: 'none' }}>
                     <Button variant="contained" color="secondary">
-                        Sign Up
+                        Submit
                     </Button>
                 </Link>
             </div>
