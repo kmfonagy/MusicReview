@@ -1,24 +1,24 @@
-.sideMenu {
+.SideMenu {
     background-color: #335080;
     justify-content: center;
     align-content: center;
     display: flex;
     flex-direction: column;
     height: 99vh;
-    padding: .2em;
+    padding: 0.2em;
     width: 9rem;
 }
 
-.buttons {
+.Buttons {
     background-color: #1E2838;
     justify-content: center;
-    align-self: top;
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     height: 20%;
 }
 
-.buttons Button {
+.Buttons Button {
     background-color: #1E2838;
     width: 100%;
     color: #ffffff;
@@ -26,11 +26,11 @@
     box-shadow: none;
 }
 
-.buttons Button:hover {
+.Buttons Button:hover {
     background-color: #335080;
 }
 
-.userInfo {
+.UserInfo {
     background-color: inherit;
     justify-content: center;
     align-self: center;
@@ -41,7 +41,7 @@
     height: 70%;
 }
 
-.logout {
+.Logout {
     background-color: inherit;
     justify-content: center;
     align-self: baseline;
@@ -53,7 +53,7 @@
     text-align: center;
 }
 
-.logout Button {
+.Logout Button {
     color: #ffffff;
     background-color: inherit;
     width: 100%;
@@ -62,6 +62,6 @@
     margin-top: .25rem;
 }
 
-.logout Button:hover {
+.Logout Button:hover {
     background-color: #1E2838;
 }
