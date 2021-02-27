@@ -5,6 +5,7 @@ import Favorites from './favs/Favs';
 import Review from "./review/Review";
 import MyReviews from './myReviews/MyReviews';
 import AlbumReview from './review/Review';
+import SignUp from './signUp/SignUp';
 import './App.css';
 import { Route } from "react-router-dom";
 import { Switch } from "react-router";
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/review' component={Review} />
         <Route path='/album-review' component={AlbumReview} />
         <Route path='/myReviews' component={MyReviews} />
+        <Route path='/signUp' component={SignUp} />
       </Switch>
     </div>
   );
