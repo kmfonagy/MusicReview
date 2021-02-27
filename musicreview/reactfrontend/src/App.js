@@ -2,8 +2,10 @@
 import Menu from './menu/Menu';
 import Login from "./login/login";
 import Favorites from './favs/Favs';
-import Reviews from "./myReviews/MyReviews";
+import Review from "./review/Review";
+import MyReviews from './myReviews/MyReviews';
 import AlbumReview from './review/Review';
+import SignUp from './signUp/SignUp';
 import './App.css';
 import { Route } from "react-router-dom";
 import { Switch } from "react-router";
@@ -16,8 +18,10 @@ const App = () => {
         <Route exact path='/' component={Login} />
         <Route path='/menu' component={Menu} />
         <Route path='/favorites' component={Favorites} />
-        <Route path='/reviews' component={Reviews} />
+        <Route path='/review' component={Review} />
         <Route path='/album-review' component={AlbumReview} />
+        <Route path='/myReviews' component={MyReviews} />
+        <Route path='/signUp' component={SignUp} />
       </Switch>
     </div>
   );

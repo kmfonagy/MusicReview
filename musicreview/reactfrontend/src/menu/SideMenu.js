@@ -13,7 +13,7 @@ class SideMenu extends Component {
                             My Favorites
                         </Button>
                     </Link>
-                    <Link to="/reviews" style={{ textDecoration: 'none' }}>
+                    <Link to="/myReviews" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             My Reviews
                         </Button>

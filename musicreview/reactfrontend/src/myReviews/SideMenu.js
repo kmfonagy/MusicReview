@@ -8,6 +8,7 @@ class SideMenu extends Component {
         return (
             <div className="SideMenu">
                 <div className="Buttons">
+                    <Button>Back</Button>
                     <Link to="/favorites" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             My Favorites

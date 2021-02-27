@@ -41,18 +41,23 @@ class Login extends Component {
                         className="input"
                         type="text"
                         value="Username"
-                        onChange={this.handleChange} />
+                        /*onChange={this.handleChange} */ />
                     <br />
                     <input
                         className="input"
                         type="text"
                         value="Password"
-                        onChange={this.handleChange} />
+                        /*onChange={this.handleChange} */ />
                     <br />
                 </Form>
                 <Link to="/menu" style={{ textDecoration: 'none' }}>
                     <Button variant="contained" color="secondary">
                         Login
+                    </Button>
+                </Link>
+                <Link to="/signUp" style={{ textDecoration: 'none' }}>
+                    <Button variant="contained" color="secondary">
+                        Sign Up
                     </Button>
                 </Link>
             </div>

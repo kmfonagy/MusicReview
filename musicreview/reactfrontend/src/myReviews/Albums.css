@@ -38,3 +38,7 @@
     color: #4E6891;
     font-size: .3em;
 }
+
+.albumsMain Button {
+    background-color: transparent;
+}
