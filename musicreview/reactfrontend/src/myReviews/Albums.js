@@ -10,7 +10,7 @@ class Albums extends Component {
                 </div>
                 <div className="albumsText">
                     <div className="albumsTitle">{this.props.title}</div>
-                    <div className="albumsArtist">by: {this.props.artist}</div>"
+                    <div className="albumsArtist">by: {this.props.artist}</div>
                 </div>
             </div>
         )

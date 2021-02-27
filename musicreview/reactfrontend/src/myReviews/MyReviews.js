@@ -11,7 +11,7 @@ class MyReviews extends Component {
                     <SideMenu />
                 </div>
                 <div className="myReviewsMain">
-                    <h1>My Reviews</h1>
+                    <div className="reviewsHeader">My Reviews</div>
                     <MyReviewsAlbums />
                 </div>
             </div>
