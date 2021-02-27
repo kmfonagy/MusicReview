@@ -3,11 +3,12 @@
     align-content: left;
     display: flex;
     padding: 1.5em;
-    max-width: 100%;
+    width: auto;
 }
 
 .albumCards {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 0 0 .25em;
 }
