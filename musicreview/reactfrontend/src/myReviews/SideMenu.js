@@ -14,11 +14,6 @@ class SideMenu extends Component {
                             My Favorites
                         </Button>
                     </Link>
-                    <Link to="/MyReviews" style={{ textDecoration: 'none' }}>
-                        <Button variant="contained" color="secondary">
-                            My Reviews
-                        </Button>
-                    </Link>
                 </div>
                 <div className="UserInfo">
                     
