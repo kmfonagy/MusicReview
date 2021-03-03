@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import './SideFavs.css'
 
 class SideFavs extends Component {
@@ -7,15 +8,27 @@ class SideFavs extends Component {
         return (
             <div className="SideFavs">
                 <div className="UserBtns">
-                    <Button>Back</Button>
-                    <Button>My Reviews</Button>
+                <Link to="/menu" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" color="secondary">
+                            Menu
+                        </Button>
+                    </Link>
+                    <Link to="/reviews" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" color="secondary">
+                            My Reviews
+                        </Button>
+                    </Link>
                 </div>
                 <div className="UserInfo">
-                    <p>&lt;User_Info_Here&gt;</p>
+                    
                 </div>
                 <div className="LoginBtns">
-                    <Button>&lt;username&gt;</Button>
-                    <Button>logout</Button>
+                    &lt;username&gt;
+                    <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
+                        <Button variant="contained" color="secondary">
+                            logout
+                        </Button>
+                    </Link>
                 </div>
             </div>
         )
