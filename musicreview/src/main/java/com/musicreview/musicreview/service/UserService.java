@@ -6,8 +6,14 @@ import com.musicreview.musicreview.model.User;
 
 public interface UserService {
 
-    List<User> get();
+    List<User> getAllUsers();
 
-    User get(int id);
+    User getUserById(int theId);
+
+    User getUserByUsername(String theUsername);
+
+    User saveUser(User theUser);
+
+    int deleteUser(int theId);
 
 }

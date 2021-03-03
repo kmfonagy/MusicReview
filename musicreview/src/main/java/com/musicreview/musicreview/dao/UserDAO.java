@@ -1,12 +1,18 @@
 package com.musicreview.musicreview.dao;
 
-import java.util.List;
+import java.util.*;
 
 import com.musicreview.musicreview.model.User;
 
 public interface UserDAO {
 
-    List<User> get();
+    List<User> getAllUsers();
 
-    User get(int id);
+    User getUserById(int theId);
+
+    User getUserByUsername(String theUsername);
+
+    User saveUser(User theUser);
+
+    void delete(int theId);
 }

@@ -6,16 +6,16 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MusicReviewApplication",
+            "request": "launch",
+            "mainClass": "com.musicreview.musicreview.MusicReviewApplication",
+            "projectName": "musicreview"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },
-        {
-            "type": "java",
-            "name": "Launch musicreviewApplication",
-            "request": "launch",
-            "mainClass": "com.musicreview.musicreview.musicreviewApplication",
-            "projectName": "musicreview"
-        }
     ]
 }

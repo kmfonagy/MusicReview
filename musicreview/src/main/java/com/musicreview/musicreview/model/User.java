@@ -8,39 +8,38 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "ID")
     private Integer id;
 
-    @Column
+    @Column(name = "Email")
     private String email;
 
-    @Column
+    @Column(name = "Username")
     private String username;
 
-    @Column
+    @Column(name = "Password")
     private String password;
-
-    @Override
-    public String toString() {
-        return "User ID = " + id + " " + "User Email = " + email + " " +  "Username = " + username + " " + "Password = " + password;
-    }
 
     public Integer getId() {
         return id;
     }
 
+    public void setId(Integer Id) {
+        this.id = Id;
+    }
+
     public String getEmail() {
-        return email; 
+        return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    } 
+    }
 
     public String getName() {
         return username;
