@@ -3,6 +3,7 @@ package com.musicreview.musicreview.dao;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -33,10 +34,14 @@ public class UserDAOImplementation implements UserDAO {
 
     @Override
     public User getUserByUsername(String theUsername) {
+        User user = null;
         Session currSession = entityManager.unwrap(Session.class);
         Query<User> query = currSession.createQuery("from User u where u.username=:username", User.class);
         query.setParameter("username", theUsername);
-        User user = query.getSingleResult();
+        try {
+            user = query.getSingleResult();
+        } catch (NoResultException e) {
+        }
         return user;
     }
 
