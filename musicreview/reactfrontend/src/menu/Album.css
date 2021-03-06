@@ -38,3 +38,7 @@
     color: #4E6891;
     font-size: .3em;
 }
+
+#album-link {
+    margin: 0 0 .1em 0;
+}

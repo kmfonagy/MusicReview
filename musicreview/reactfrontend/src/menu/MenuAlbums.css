@@ -1,9 +1,44 @@
 .MenuAlbums {
-    justify-content: left;
-    align-content: left;
+    justify-content: center;
+    align-content: center;
     display: flex;
-    padding: 1.5em;
+    flex-direction: column;
+    padding: 0 1.5em;
     width: auto;
+}
+
+.MenuSearch {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    margin: .5em 0 2em 0;
+}
+
+.MenuBar {
+    align-content: center;
+    display: flex;
+    width: 70%;
+    margin: 0 1.5em 0 0;
+}
+
+.MenuInput {
+    width: 100%;
+    display: flex;
+    color: #000000;
+    border-color: #4E6891;
+}
+
+.MenuSearch Button {
+    width: 10rem;
+    background-color: #4E6891;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.MenuSearch Button:hover {
+    background-color: #555555;
+    border-radius: 0;
 }
 
 .AlbumCards {
