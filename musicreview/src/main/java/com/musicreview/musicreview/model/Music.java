@@ -1,6 +1,5 @@
 package com.musicreview.musicreview.model;
 
-import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,39 +12,33 @@ import javax.persistence.Table;
 public class Music {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "ID")
     private Integer id;
 
-    @Column
+    @Column(name = "Title")
     private String title;
 
-    @Column
-    private Date released_Date;
+    @Column(name = "Release_date")
+    private String release_Date;
 
-    @Column
+    @Column(name = "Duration")
     private String duration;
 
-    @Column
-    private int rating;
-
-    @Column
+    @Column(name = "Genre")
     private String genre;
 
-    @Column
+    @Column(name = "Artist")
     private String artist;
 
-    @Column
+    @Column(name = "AlbumArt")
     private String albumArt;
-
-    @Override
-    public String toString() {
-        return "Song id = " + id + " " + "Title = " + title + " " + "Released Date = " + released_Date + " "
-                + "Duration = " + duration + " " + "Rating = " + rating + " " + "Genre = " + genre + " " + "Artist = "
-                + artist + " " + "albumArt = " + albumArt;
-    }
 
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -56,12 +49,12 @@ public class Music {
         this.title = title;
     }
 
-    public Date getRelease_Date() {
-        return released_Date;
+    public String getRelease_Date() {
+        return release_Date;
     }
 
-    public void setRelease_Date(Date release_Date) {
-        this.released_Date = release_Date;
+    public void setRelease_Date(String release_Date) {
+        this.release_Date = release_Date;
     }
 
     public String getDuration() {
@@ -70,14 +63,6 @@ public class Music {
 
     public void setDuration(String duration) {
         this.duration = duration;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
     }
 
     public String getGenre() {
