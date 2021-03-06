@@ -1,4 +1,5 @@
 package com.musicreview.musicreview.model;
+
 import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,40 +9,51 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name ="reviews")
+@Table(name = "reviews")
 public class Review {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id")
     private Integer id;
 
-    @Column
+    @Column(name = "title")
     private String title;
 
-    @Column
+    @Column(name = "rating")
     private int rating;
 
-    @Column
+    @Column(name = "description")
     private String description;
-    
-    @Column
+
+    @Column(name = "created_on")
     private Date created_On;
+
+    @Column(name = "MusicID")
+    private Integer musicID;
+
+    @Column(name = "UserID")
+    private Integer userID;
 
     @Override
     public String toString() {
-        return "User ID = " + id + " " + "Song Title = " + title + " " +  "Rating = " + rating + " " + "Description = " + description + " " + "Created on = " + created_On;
+        return "User ID = " + id + " " + "Song Title = " + title + " " + "Rating = " + rating + " " + "Description = "
+                + description + " " + "Created on = " + created_On;
     }
 
     public Integer getId() {
-        return id;        
+        return id;
     }
-    
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
-    
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -49,7 +61,7 @@ public class Review {
         return rating;
     }
 
-    public void setRating(int rating){
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
@@ -64,9 +76,16 @@ public class Review {
     public Date getDate() {
         return created_On;
     }
-    
+
     public void setDate(Date created_On) {
         this.created_On = created_On;
     }
-    
+
+    public Integer getUserID() {
+        return userID;
+    }
+
+    public Integer getMusicID() {
+        return musicID;
+    }
 }
