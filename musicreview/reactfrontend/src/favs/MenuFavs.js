@@ -11,9 +11,10 @@ class MenuFavs extends Component {
     render() {
         return(
             <div className="FavAlbums">
+                <div className="FavsHeader">My Favorites</div>
                 <div className="AlbumCards">
                     {tempData.music.filter(favd => favd.fav).map((p) => (
-                        <Album id={p.id} title={p.title} artist={p.artist} img={p.img} />
+                        <Album key={p.id} title={p.title} artist={p.artist} img={p.img} />
 					))}
                 </div>
             </div>

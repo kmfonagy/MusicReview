@@ -11,7 +11,6 @@ class Menu extends Component {
                     <SideFavs />
                 </div>
                 <div className="FavsMain">
-                    <div className="FavsHeader">Favorites</div>
                     <MenuFavs />
                 </div>
             </div>

@@ -7,7 +7,7 @@ class SideFavs extends Component {
     render() {
         return (
             <div className="SideFavs">
-                <div className="UserBtns">
+                <div className="UserFavsBtns">
                 <Link to="/menu" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             Menu
@@ -19,11 +19,11 @@ class SideFavs extends Component {
                         </Button>
                     </Link>
                 </div>
-                <div className="UserInfo">
+                <div className="UserFavsInfo">
                     
                 </div>
                 <div className="LoginBtns">
-                    &lt;username&gt;
+                    test
                     <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
                         <Button variant="contained" color="secondary">
                             logout
