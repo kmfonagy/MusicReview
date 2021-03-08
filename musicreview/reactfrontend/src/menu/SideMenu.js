@@ -7,7 +7,7 @@ class SideMenu extends Component {
     render() {
         return (
             <div className="SideMenu">
-                <div className="UserBtns">
+                <div className="UserMenuBtns">
                     <Link to="/favorites" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             My Favorites
@@ -19,11 +19,11 @@ class SideMenu extends Component {
                         </Button>
                     </Link>
                 </div>
-                <div className="UserInfo">
+                <div className="UserMenuInfo">
                     
                 </div>
-                <div className="LoginBtns">
-                    &lt;username&gt;
+                <div className="LoginMenuBtns">
+                    test
                     <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
                         <Button variant="contained" color="secondary">
                             logout

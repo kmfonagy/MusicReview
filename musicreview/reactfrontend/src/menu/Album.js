@@ -15,7 +15,7 @@ class Album extends Component {
                         
                 <div className="AlbumText">
                     <div className="AlbumTitle">{this.props.title}</div>
-                    <div className="AlbumArtist">by: {this.props.artist}</div>
+                    <div className="AlbumArtist">By: {this.props.artist}</div>
                 </div>
             </div>
         )

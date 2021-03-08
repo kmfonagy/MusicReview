@@ -9,39 +9,41 @@
     width: 9rem;
 }
 
-.UserBtns {
+.UserMenuBtns {
     background-color: #1E2838;
     justify-content: center;
     align-self: top;
     display: flex;
     flex-direction: column;
     height: 20%;
+    color: #cccccc;
 }
 
-.UserBtns Button {
+.UserMenuBtns Button {
     background-color: #1E2838;
     width: 100%;
-    color: #ffffff;
+    color: #cccccc;
     border-radius: 0;
     box-shadow: none;
+    color: #cccccc;
 }
 
-.UserBtns Button:hover {
+.UserMenuBtns Button:hover {
     background-color: #335080;
 }
 
-.UserInfo {
+.UserMenuInfo {
     background-color: inherit;
     justify-content: center;
     align-self: center;
     display: flex;
     margin: 0 .2em;
-    color: #ffffff;
+    color: #cccccc;
     font-size: 1rem;
     height: 70%;
 }
 
-.LoginBtns {
+.LoginMenuBtns {
     background-color: inherit;
     justify-content: center;
     align-self: baseline;
@@ -51,17 +53,19 @@
     height: 10%;
     font-size: 1rem;
     text-align: center;
+    color:#cccccc;
 }
 
-.LoginBtns Button {
-    color: #ffffff;
+.LoginMenuBtns Button {
+    color: #cccccc;
     background-color: inherit;
     width: 100%;
     box-shadow: none;
     border-radius: 0;
     margin-top: .25rem;
+    color: #cccccc;
 }
 
-.LoginBtns Button:hover {
+.LoginMenuBtns Button:hover {
     background-color: #1E2838;
 }

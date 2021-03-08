@@ -1,15 +1,19 @@
 .Menu {
-    justify-content: center;
-    align-content: center;
+    justify-content: left;
+    align-content: left;
     display: flex;
 }
 
 .MenuSide {
     margin: 0.5rem;
+    flex-direction: row;
 }
 
 .MenuMain {
+    justify-content: center;
+    align-content: center;
     max-width: 80%;
     margin: 0.5rem;
+    flex-direction: column;
 }
 

@@ -29,14 +29,14 @@
 
 .AlbumTitle {
     text-align: right;
-    color: #4E6891;
+    color: #cccccc;
     font-size: .5em;
 }
 
 .AlbumArtist {
     text-align: right;
-    color: #4E6891;
-    font-size: .3em;
+    color: #cccccc;
+    font-size: .35em;
 }
 
 #album-link {

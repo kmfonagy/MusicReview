@@ -55,7 +55,7 @@ class MenuAlbums extends Component {
                             }
                         })
                         .map((album) => (
-						<Album id={album.id} title={album.title} artist={album.artist} img={album.img} />
+						<Album key={album.id} title={album.title} artist={album.artist} img={album.img} />
 					))}
                 </div>
             </div>
