@@ -8,19 +8,19 @@ class SideFavs extends Component {
         return (
             <div className="SideFavs">
                 <div className="UserFavsBtns">
-                <Link to="/menu" style={{ textDecoration: 'none' }}>
+                    <Link to="/menu" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             Menu
                         </Button>
                     </Link>
-                    <Link to="/reviews" style={{ textDecoration: 'none' }}>
+                    <Link to="/myReviews" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             My Reviews
                         </Button>
                     </Link>
                 </div>
                 <div className="UserFavsInfo">
-                    
+
                 </div>
                 <div className="LoginBtns">
                     test
