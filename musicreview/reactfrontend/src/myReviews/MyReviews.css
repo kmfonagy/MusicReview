@@ -1,25 +1,18 @@
-.myReviews {
-    justify-content: center;
-    align-content: center;
+.MyReviews {
+    justify-content: left;
+    align-content: left;
     display: flex;
 }
 
-.sideMenu {
+.MyReviewsSide {
     margin: 0.5rem;
+    flex-direction: row;
 }
 
-.myReviewsMain {
+.MyReviewsMain {
+    justify-content: center;
+    align-content: center;
     max-width: 80%;
     margin: 0.5rem;
-}
-
-.reviewsHeader {
-    width: auto;
-    background-color: #4E6891;
-    color: #ffffff;
-    border-radius: 0;
-    justify-content: center;
-    text-align: center;
-    padding: .25rem;
-    margin: 0 5em 0 3em;
+    flex-direction: column;
 }

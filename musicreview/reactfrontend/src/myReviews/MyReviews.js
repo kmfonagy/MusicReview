@@ -6,12 +6,11 @@ import "./MyReviews.css";
 class MyReviews extends Component {
     render() {
         return (
-            <div className="myReviews">
-                <div className="sideMenu">
+            <div className="MyReviews">
+                <div className="MyReviewsSide">
                     <SideMenu />
                 </div>
-                <div className="myReviewsMain">
-                    <div className="reviewsHeader">My Reviews</div>
+                <div className="MyReviewsMain">
                     <MyReviewsAlbums />
                 </div>
             </div>

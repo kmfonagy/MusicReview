@@ -1,47 +1,48 @@
-.SideMenu {
+.SideRevs {
     background-color: #335080;
     justify-content: center;
     align-content: center;
     display: flex;
     flex-direction: column;
     height: 99vh;
-    padding: 0.2em;
+    padding: .2em;
     width: 9rem;
 }
 
-.Buttons {
+.UserRevsBtns {
     background-color: #1E2838;
     justify-content: center;
-    align-self: stretch;
+    align-self: top;
     display: flex;
     flex-direction: column;
     height: 20%;
+    color: #cccccc;
 }
 
-.Buttons Button {
+.UserRevsBtns Button {
     background-color: #1E2838;
     width: 100%;
-    color: #ffffff;
     border-radius: 0;
     box-shadow: none;
+    color: #cccccc;
 }
 
-.Buttons Button:hover {
+.UserRevsBtns Button:hover {
     background-color: #335080;
 }
 
-.UserInfo {
+.UserRevsInfo {
     background-color: inherit;
     justify-content: center;
     align-self: center;
     display: flex;
-    margin: .2em;
-    color: #ffffff;
+    margin: 0 .2em;
+    color: #cccccc;
     font-size: 1rem;
     height: 70%;
 }
 
-.Logout {
+.LoginRevsBtns {
     background-color: inherit;
     justify-content: center;
     align-self: baseline;
@@ -51,10 +52,11 @@
     height: 10%;
     font-size: 1rem;
     text-align: center;
+    color: #cccccc;
 }
 
-.Logout Button {
-    color: #ffffff;
+.LoginRevsBtns Button {
+    color: #cccccc;
     background-color: inherit;
     width: 100%;
     box-shadow: none;
@@ -62,6 +64,7 @@
     margin-top: .25rem;
 }
 
-.Logout Button:hover {
+.LoginRevsBtns Button:hover {
     background-color: #1E2838;
 }
+
