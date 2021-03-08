@@ -6,7 +6,7 @@ class ReviewStar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dynamicValue: props.stars,
+      dynamicValue: props.value,
       value: 0
     };
     this.handleClick = this.handleClick.bind(this);
@@ -36,7 +36,7 @@ class ReviewStar extends Component {
       starSpans.push(
         <Star
           key={v}
-          color={"#ffffff"}
+          color={"#cccccc"}
           isFilled={v <= dynamicValue}
           value={v}
           handleHover={this.handleMouseEnter}

@@ -1,6 +1,6 @@
 .Review {
-    justify-content: right;
-    align-content: right;
+    justify-content: left;
+    align-content: left;
     display: flex;
 }
 

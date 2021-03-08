@@ -1,0 +1,44 @@
+{
+    "favorites": [
+        {
+            "ID": 1,
+            "MusicID": 1,
+            "UserID": 3
+        },
+        {
+            "ID": 2,
+            "MusicID": 1,
+            "UserID": 1
+        },
+        {
+            "ID": 3,
+            "MusicID": 1,
+            "UserID": 2
+        },
+        {
+            "ID": 4,
+            "MusicID": 1,
+            "UserID": 6
+        },
+        {
+            "ID": 5,
+            "MusicID": 1,
+            "UserID": 10
+        },
+        {
+            "ID": 6,
+            "MusicID": 1,
+            "UserID": 13
+        },
+        {
+            "ID": 7,
+            "MusicID": 1,
+            "UserID": 9
+        },
+        {
+            "ID": 8,
+            "MusicID": 1,
+            "UserID": 8
+        }
+    ]
+}

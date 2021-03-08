@@ -1,16 +1,25 @@
 .MenuRev {
-    justify-content: space-between;
+    justify-items: normal;
     align-content: left;
     display: flex;
     flex-direction: column;
     padding: 1.5em;
     width: auto;
     min-width: 23em;
+    height: 1200px;
 }
 
 .MenuRevAlbum {
     width: auto;
     min-width: 40rem;
+}
+
+.MenuForm {
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    width: auto;
 }
 
 .MenuRevStarTitle {
@@ -42,7 +51,6 @@
 
 .RevTitle {
     padding: .5rem 1rem;
-    color: #4E6891;
 }
 
 .TitleField {
@@ -60,7 +68,7 @@
     background-color: #ffffff;
     border: 4px solid #335080;
     border-radius: 0;
-    width: auto;
+    width: 95%;
     font-family: Roboto;
     font-size: 1.2rem;
     color: #1E2838;
@@ -68,7 +76,7 @@
 }
 
 .MenuRevButtons {
-    justify-content: space-evenly;
+    justify-content: left;
     align-content: center;
     display: flex;
     flex-direction: row;
@@ -93,7 +101,7 @@
 .ButtonBlock Button {
     width: 5rem;
     background-color: #4E6891;
-    color: #ffffff;
+    color: #cccccc;
     border-radius: 0;
     margin: 0 .5rem;
 }
@@ -101,4 +109,12 @@
 .ButtonBlock Button:hover {
     background-color: #555555;
     border-radius: 0;
+}
+
+.ReviewsList {
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    width: auto;
+    margin-top: 3rem;
 }

@@ -1,87 +1,140 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import AlbumRev from './AlbumRev';
+import Form from "react-bootstrap/Form";
 import ReviewStar from './ReviewStar';
-import { Button, Typography } from '@material-ui/core';
+import ReviewedList from "./ReviewedList"
+import { Button } from '@material-ui/core';
+import tempFavs from './tempFavs.json';
+import tempReviews from './tempReviews.json';
+import tempData from './tempData.json';
 import './MenuRev.css';
-import { RotateRightSharp } from '@material-ui/icons';
 
 class MenuRev extends Component {
-    // Can be deleted once connected to database
-    static defaultProps = {
-        music : [
-            {
-                id: 1,
-                title: 'Medicine at Midnight',
-                artist: 'Foo Fighters',
-                release_date: '02/12/2021',
-                duration: '00:37',
-                rating: 4,
-                genre: 'Rock',
-                img: 'https://media.pitchfork.com/photos/5ff365a123155174547abec2/1:1/w_320/Foo-Fighters.jpg'
-            }
+    constructor(props){
+        super(props)
+        this.state = {
+            userId: 0,
+            musicId: 0,
+            fav: false,
+            rating: 0,
+            title: ``,
+            description: ``,
+            created_on: ``,
+            revDis: false
+        }
+        this.onTitleChange = this.onInputChange.bind(this, 'title');
+        this.onDescChange = this.onInputChange.bind(this, 'description');
+        this.onSubmitForm = this.onSubmitForm.bind(this);
+        this.Clear = this.onClear.bind(this);
+        
+        this.user = 4;
+        this.album = 1;
+        this.revDis = false;
+    }
 
-        ],
-        review : [
-            {
-                id: 1,
-                title: `Great work Fighters!`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis dapibus egestas. Fusce a urna sed nunc tincidunt rhoncus. Nunc quis ex at felis auctor dapibus. In varius aliquam metus eget tempor. Ut auctor eros id ligula facilisis tincidunt. Etiam consectetur quis massa in eleifend. Vivamus non turpis dapibus, rutrum nibh eget, accumsan ante.`,
-                created_on: `02/18/2021`
+    componentDidMount() {
+        for(let i = 0; i < tempReviews.review.length; i++){
+            if(
+                tempReviews.review[i].MusicID == this.album &&
+                tempReviews.review[i].UserID == this.user
+            ){
+                this.setState(
+                    {revDis: true}
+                )
             }
+        }
+        if(tempFavs.favorites.UserID === this.user) {
+            this.setState(
+                {fav: true}
+            )
+        }
+    }
 
-        ]
-    };
-    
+    onInputChange(keyName, event) {
+        this.setState(
+            {[keyName]: event.target.value,
+            created_on: new Date().toLocaleString(),
+            userId: this.user,
+            musicId: this.album}
+        )
+    }
+
+    onSubmitForm(event){
+        console.log(this.state);
+        event.preventDefault();
+    }
+
+    onClear(){
+        this.setState(
+            {
+                title: '',
+                description: '',
+                created_on: '',
+                userId: 0,
+                musicId: 0
+            }
+        )
+    }
+
     render() {
+        
+        const favorited = this.state.fav;
+        const reviewed = this.state.revDis;
+
+        
+        
         return(
             <div className="MenuRev">
                 <div className="MenuRevAlbum">
-                    {this.props.music.map((p) => (
+                    {tempData.music.filter(music => music.id == this.album).map((p) => (
 						<AlbumRev
-                            id={p.id}
+                            key={this.album}
                             img={p.img}
                             title={p.title}
                             artist={p.artist}
                             duration={p.duration}
                             release_date={p.release_date}
                             genre={p.genre}
+                            fav={favorited}
                         />
 					))}
                 </div>
-                <div className="MenuRevStarTitle">
-                    <div  className="RevStar">
-                        {this.props.music.map((p) => (
-                            <ReviewStar id={p.id} stars={p.rating} />
-                        ))}
-                    </div>
-                    <div className="TitleBlock">
-                        <div className="RevTitle">
-                            Title: 
-                        </div>
-                        {this.props.review.map((p) => (
-                            <input className='TitleField' id="search" name="search" value={p.title}></input>
-                        ))}
-                    </div>
-                </div>
-                {this.props.review.map((p) => (
-                    <textarea
-                        className="MenuRevDesc"
-                        id="outlined-textarea"
-                        label="Description"
-                        variant="outlined"
-                        rows="8"
-                        value={p.description}
-                        // onChange={handleChange}
-                    ></textarea>
-                ))}
-                <div className="MenuRevButtons">
-                    {this.props.review.map((p) => (
-                        <Typography className="CreatedOn">created: {p.created_on}</Typography>
-                    ))}
-                    <div className="ButtonBlock">
-                        <Button id="review-clear">Clear</Button>
-                        <Button id="review-submit">Submit</Button>
-                    </div>
+                
+                {reviewed ? <div className='MenuRevLeft'></div> :
+                    <Form  onSubmit={this.onSubmitForm}>
+                            <div className="MenuRevStarTitle">
+                                <div className="RevStar">
+                                    <ReviewStar />
+                                </div>
+                                <div className="TitleBlock">
+                                    <div className="RevTitle">
+                                        Title: 
+                                    </div>
+                                    <input 
+                                        className='TitleField'
+                                        value={this.state.title}
+                                        onChange={this.onTitleChange}
+                                    />
+                                </div>
+                            </div>
+                            <textarea
+                                className="MenuRevDesc"
+                                id="outlined-textarea"
+                                label="Description"
+                                variant="outlined"
+                                rows="8"
+                                value={this.state.description}
+                                onChange={this.onDescChange}
+                            />
+                            <div className="MenuRevButtons">
+                                <div className="ButtonBlock">
+                                    <Button id="review-clear" onClick={this.Clear}>Clear</Button>
+                                    <Button id="review-submit" type="submit" >Submit</Button>
+                                </div>
+                            </div>
+                        </Form>}
+                <div className="ReviewsList">
+                    <ReviewedList album={this.album}/>
                 </div>
             </div>
         )

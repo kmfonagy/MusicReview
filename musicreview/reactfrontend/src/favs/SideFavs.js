@@ -7,7 +7,9 @@ class SideFavs extends Component {
     render() {
         return (
             <div className="SideFavs">
-                <div className="UserFavsBtns">
+
+                <div className="UserBtns">
+
                     <Link to="/menu" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             Menu

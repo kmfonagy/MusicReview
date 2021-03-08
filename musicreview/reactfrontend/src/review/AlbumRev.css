@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     width: fit-content;
-    color: #4E6891;
+    color: #cccccc;
 }
 
 .RevAlbumImg {
@@ -23,21 +23,32 @@
     flex-wrap: wrap;
 }
 
+.RevTitleBlock {
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+}
+
 .RevAlbumTitle {
     font-size: 2em;
-    margin-bottom: .25em;
+    margin-right: 2rem;
+    width: 23rem;
     display: flex;
     flex-wrap: wrap;
-    width: auto;
+}
+
+.RevHeart {
+    font-size: 2em;
 }
 
 .RevAlbumDetails {
-    align-content: center;
+    align-self: baseline;
+    vertical-align: bottom;
     display: flex;
     flex-direction: column;
     font-size: medium;
     width: auto;
-    margin-top: 1.5rem
+    margin-top: 3rem
 }
 
 .RevAlbumLine {

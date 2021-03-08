@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import './SideRev.css'
 
 class SideRev extends Component {
@@ -7,16 +8,32 @@ class SideRev extends Component {
         return (
             <div className="SideRev">
                 <div className="UserBtns">
-                    <Button>Back</Button>
-                    <Button>My Favorites</Button>
-                    <Button>My Reviews</Button>
+                    <Link to="/menu" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" color="secondary">
+                            Menu
+                        </Button>
+                    </Link>
+                    <Link to="/favorites" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" color="secondary">
+                            My Favorites
+                        </Button>
+                    </Link>
+                    <Link to="/reviews" style={{ textDecoration: 'none' }}>
+                        <Button variant="contained" color="secondary">
+                            My Reviews
+                        </Button>
+                    </Link>
                 </div>
                 <div className="UserInfo">
-                    <p>&lt;User_Info_Here&gt;</p>
+                    
                 </div>
                 <div className="LoginBtns">
-                    <Button>&lt;username&gt;</Button>
-                    <Button>logout</Button>
+                    &lt;username&gt;
+                    <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
+                        <Button variant="contained" color="secondary">
+                            logout
+                        </Button>
+                    </Link>
                 </div>
             </div>
         )
