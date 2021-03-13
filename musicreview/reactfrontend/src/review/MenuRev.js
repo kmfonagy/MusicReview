@@ -27,7 +27,7 @@ class MenuRev extends Component {
         this.onSubmitForm = this.onSubmitForm.bind(this);
         this.Clear = this.onClear.bind(this);
         
-        this.user = 4;
+        this.user = 3;
         this.album = 1;
         this.revDis = false;
     }

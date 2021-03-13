@@ -35,7 +35,7 @@ export default function ReviewedList() {
                             </div>
                         </GridListTile>
                     ))}
-      </GridList>
-    </div>
-  );
+            </GridList>
+        </div>
+    );
 }
