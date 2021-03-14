@@ -4,8 +4,8 @@
     align-content: center;
     display: flex;
     flex-direction: column;
-    max-width: 10rem;
-    margin: 0 .25em .5em .25em;
+    width: 10rem;
+    margin: .5rem .25rem .25rem;
 }
 
 .AlbumImg {
@@ -16,7 +16,7 @@
 }
 
 .AlbumImg img {
-    max-width: 10rem;
+    width: 10rem;
 }
 
 .AlbumText {
@@ -30,15 +30,15 @@
 .AlbumTitle {
     text-align: right;
     color: #cccccc;
-    font-size: .5em;
+    font-size: .8rem;
 }
 
 .AlbumArtist {
     text-align: right;
     color: #cccccc;
-    font-size: .35em;
+    font-size: .6rem;
 }
 
 #album-link {
-    margin: 0 0 .1em 0;
+    margin: 0 0 .1rem 0;
 }

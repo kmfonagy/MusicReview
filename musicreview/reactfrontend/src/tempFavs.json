@@ -1,0 +1,109 @@
+{
+    "favorites": [
+        {
+            "ID": 1,
+            "MusicID": 1,
+            "UserID": 3
+        },
+        {
+            "ID": 2,
+            "MusicID": 1,
+            "UserID": 4
+        },
+        {
+            "ID": 3,
+            "MusicID": 1,
+            "UserID": 2
+        },
+        {
+            "ID": 4,
+            "MusicID": 1,
+            "UserID": 6
+        },
+        {
+            "ID": 5,
+            "MusicID": 1,
+            "UserID": 10
+        },
+        {
+            "ID": 6,
+            "MusicID": 1,
+            "UserID": 13
+        },
+        {
+            "ID": 7,
+            "MusicID": 1,
+            "UserID": 9
+        },
+        {
+            "ID": 8,
+            "MusicID": 1,
+            "UserID": 8
+        },
+        {
+            "ID": 9,
+            "MusicID": 6,
+            "UserID": 1
+        },
+        {
+            "ID": 10,
+            "MusicID": 4,
+            "UserID": 1
+        },
+        {
+            "ID": 11,
+            "MusicID": 7,
+            "UserID": 1
+        },
+        {
+            "ID": 12,
+            "MusicID": 8,
+            "UserID": 1
+        },
+        {
+            "ID": 13,
+            "MusicID": 10,
+            "UserID": 1
+        },
+        {
+            "ID": 14,
+            "MusicID": 11,
+            "UserID": 1
+        },
+        {
+            "ID": 15,
+            "MusicID": 14,
+            "UserID": 1
+        },
+        {
+            "ID": 16,
+            "MusicID": 15,
+            "UserID": 1
+        },
+        {
+            "ID": 17,
+            "MusicID": 18,
+            "UserID": 1
+        },
+        {
+            "ID": 18,
+            "MusicID": 22,
+            "UserID": 1
+        },
+        {
+            "ID": 19,
+            "MusicID": 23,
+            "UserID": 1
+        },
+        {
+            "ID": 20,
+            "MusicID": 29,
+            "UserID": 1
+        },
+        {
+            "ID": 21,
+            "MusicID": 30,
+            "UserID": 1
+        }
+    ]
+}

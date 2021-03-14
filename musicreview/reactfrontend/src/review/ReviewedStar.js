@@ -23,6 +23,7 @@ class ReviewedStar extends Component {
           color={"#cccccc"}
           isFilled={v <= dynamicValue}
           value={v}
+          action={this.props.action}
         />
       );
     }

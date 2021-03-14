@@ -4,7 +4,9 @@ import './AlbumRev.css';
 
 
 class AlbumRev extends Component {
+
     render() {
+        console.log('Album being reviewed: Title: ' + this.props.title + ', Artist: ' + this.props.artist + ', UserID: ' + this.props.UserID);
         return (
             <div className="RevAlbumMain">
                 <div className="RevAlbumImg">
@@ -15,8 +17,11 @@ class AlbumRev extends Component {
                         <div className="RevAlbumTitle">
                             {this.props.title}
                         </div>
-                        <div  className="RevHeart">
-                            <ReviewHeart />
+                        <div className="RevHeart">
+                            <ReviewHeart
+                                album={this.props.MusicID}
+                                UserID={this.props.UserID}
+                            />
                         </div>
                     </div>
                     <div className="RevAlbumDetails">

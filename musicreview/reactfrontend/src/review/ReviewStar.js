@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Star from "./Star";
+import Star from './Star';
 
 class ReviewStar extends Component {
   static defaultProps = { max: 5 };
@@ -18,6 +18,7 @@ class ReviewStar extends Component {
       value: newValue,
       dynamicValue: newValue
     });
+    console.log(this.state.value)
   }
   handleMouseEnter(newValue) {
     this.setState({ dynamicValue: newValue });

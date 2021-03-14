@@ -11,7 +11,7 @@ function Heart({
     return (
         <span
             className="Heart"
-            style={{ color:'#4E6891'}}
+            style={{ color }}
             onMouseEnter={() => handleHover(value)}
             onMouseLeave={() => handleHoverLeave(value)}
             onClick={() => handleClick(value)}

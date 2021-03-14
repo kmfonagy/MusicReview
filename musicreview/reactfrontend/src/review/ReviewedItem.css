@@ -4,16 +4,16 @@
     justify-self: center;
     align-content: center;
     flex-direction: column;
-    width: auto;
-    height: 500px;
+    width: 50rem;
+    height: 30rem;
     color: #cccccc;
   }
 
 .RevGridList {
     justify-content: center;
     justify-self: center;
-    width: 600px;
-    height: 450;
+    width: 50rem;
+    height: auto;
 }
 
 .RevItem {
@@ -21,7 +21,7 @@
     align-content: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
 }
 
 .RevItemHead {
@@ -32,19 +32,21 @@
     margin-bottom: .5rem;
 }
 
-.ReviewedStar {
-
+.ReviewedTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
-.RevTitle {
-    font-size: .8em;
+.ReviewedStar {
+    font-size: 1.2rem;
+    vertical-align: middle;
 }
 
 .RevItemDesc {
     justify-self: center;
     text-align: left;
     display: flex;
-    font-size: .6em;
+    font-size: 1rem;
     margin-bottom: .5rem;
 }
 
@@ -53,12 +55,13 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    color: #4E6891;
 }
 
 .RevItemUser {
-    font-size: .6em;
+    font-size: .8rem;
 }
 
 .RevItemDate {
-    font-size: .6em;
+    font-size: .8rem;
 }

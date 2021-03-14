@@ -90,38 +90,50 @@ class Login extends Component {
         }
         return (
             <div className="Login">
-                <Form onSubmit={this.hanldeSubmit}>
+                <Form className="LoginForm" onSubmit={this.handleSubmit}>
                     {
                         this.state.error &&
-                        <h3 onClick={this.dismissError}> {this.state.error}
-                        </h3>
+                        <h4 onClick={this.dismissError}> {this.state.error}
+                        </h4>
                     }
-
-                    <label>
-                        Please enter your login information
-                    </label>
-                    <br />
-                    <input
-                        type="text"
-                        placeholder="Username"
-                        value={this.state.username}
-                        onChange={this.handleUserChange} />
-                    <br />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.handlePassChange} />
-                    <br />
+                    <div className="LoginHeader">
+                        <div className="LoginHeaderTitle">
+                            Welcome to MusicReview
+                        </div>
+                        <div className="LoginHeaderText">
+                            Please enter your login information.
+                        </div>
+                        <div className="LoginSubHeader">
+                            If you don't have an account, please click to Sign Up!
+                        </div>
+                    </div>
+                    <div className="LoginFields">
+                        <input
+                            className="LoginInputs"
+                            type="text"
+                            placeholder="Username"
+                            value={this.state.username}
+                            onChange={this.handleUserChange}
+                        />
+                        <input
+                            className="LoginInputs"
+                            type="password"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.handlePassChange}
+                        />
+                    </div>
+                    <div className="LoginBtnShelf">
+                        <Button variant="contained" color="secondary" type="submit">
+                            Login
+                            </Button>
+                        <Link to="/sign-up" style={{ textDecoration: 'none' }}>
+                            <Button className="LogInBtns" variant="contained" color="secondary">
+                                Sign Up
+                            </Button>
+                        </Link>
+                    </div>
                 </Form>
-                <Button onClick={this.handleSubmit} variant="contained" color="secondary" >
-                    Login
-                </Button>
-                <Link to="/signUp" style={{ textDecoration: 'none' }}>
-                    <Button variant="contained" color="secondary">
-                        Sign Up
-                    </Button>
-                </Link>
             </div>
         )
     }

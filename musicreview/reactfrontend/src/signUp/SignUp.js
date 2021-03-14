@@ -8,32 +8,43 @@ class SignUp extends Component {
     render() {
         return (
             <div className="SignUp">
-                <Form onSubmit={this.handleSubmit}>
-                    <label>
-                        Create Account, <br /> Sign up to get started!
-                    </label>
-                    <br />
-                    <input
-                        className="input"
-                        type="text"
-                        value="Username" />
-                    <br />
-                    <input
-                        className="input"
-                        type="text"
-                        value="Email Address" />
-                    <br />
-                    <input
-                        className="input"
-                        type="text"
-                        value="Password"/>
-                    <br />
+                <Form className="SignUpForm" onSubmit={this.handleSubmit}>
+                    <div className="SignUpHeader">
+                        <div className="SignUpHeaderTitle">
+                            Create Your MusicReview Account
+                        </div>
+                        <div className="SignUpHeaderText">
+                            Sign up to get started!
+                        </div>
+                        <div className="SignUpSubHeader">
+                            Rate. Review. Enjoy.
+                        </div>
+                    </div>
+                    <div className="SignUpFields">
+                        <input
+                            className="input"
+                            type="text"
+                            value="Username" 
+                        />
+                        <input
+                            className="input"
+                            type="text"
+                            value="Email Address" 
+                        />
+                        <input
+                            className="input"
+                            type="text"
+                            value="Password"
+                        />
+                    </div>
+                    <div className="SignUpBtnShelf">
+                        <Link to="/menu" style={{ textDecoration: 'none' }}>
+                            <Button variant="contained" color="secondary">
+                                Submit
+                            </Button>
+                        </Link>
+                    </div>
                 </Form>
-                <Link to="/menu" style={{ textDecoration: 'none' }}>
-                    <Button variant="contained" color="secondary">
-                        Submit
-                    </Button>
-                </Link>
             </div>
         )
     }

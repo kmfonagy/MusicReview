@@ -1,27 +1,30 @@
 .SideMenu {
     background-color: #335080;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     display: flex;
     flex-direction: column;
-    height: 99vh;
-    padding: .2em;
+    height: 96vh;
+    padding: .5rem;
     width: 9rem;
+    box-shadow: 0 .5rem .8rem rgba(10, 10, 10, 0.3);
 }
 
 .UserMenuBtns {
     background-color: #1E2838;
     justify-content: center;
-    align-self: top;
+    align-self: inherit;
+    justify-self: flex-start;
     display: flex;
     flex-direction: column;
-    height: 20%;
-    color: #cccccc;
+    height: 10rem;
+    box-shadow: 0 .2rem .3rem rgba(10, 10, 10, 0.3);
 }
 
 .UserMenuBtns Button {
     background-color: #1E2838;
     width: 100%;
+    font-family: Roboto;
     color: #cccccc;
     border-radius: 0;
     box-shadow: none;
@@ -29,7 +32,8 @@
 }
 
 .UserMenuBtns Button:hover {
-    background-color: #335080;
+    background-color: #4E6891;
+    box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3);
 }
 
 .UserMenuInfo {
@@ -37,35 +41,37 @@
     justify-content: center;
     align-self: center;
     display: flex;
-    margin: 0 .2em;
+    font-family: Roboto;
     color: #cccccc;
     font-size: 1rem;
-    height: 70%;
 }
 
-.LoginMenuBtns {
+.LogOutMenuBtns {
     background-color: inherit;
     justify-content: center;
     align-self: baseline;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 10%;
+    height: auto;
     font-size: 1rem;
     text-align: center;
+    font-family: Roboto;
     color:#cccccc;
 }
 
-.LoginMenuBtns Button {
+.LogOutMenuBtns Button {
     color: #cccccc;
     background-color: inherit;
     width: 100%;
     box-shadow: none;
     border-radius: 0;
     margin-top: .25rem;
+    font-family: Roboto;
     color: #cccccc;
 }
 
-.LoginMenuBtns Button:hover {
+.LogOutMenuBtns Button:hover {
     background-color: #1E2838;
+    box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3);
 }

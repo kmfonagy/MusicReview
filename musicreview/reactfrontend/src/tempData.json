@@ -1,0 +1,274 @@
+{
+    "music" : [
+        {
+            "ID": "1",
+            "Title": "Medicine at Midnight",
+            "Artist": "Foo Fighters",
+            "Release_date": "02/12/2021",
+            "Duration": "00:37",
+            "Genre": "Rock",
+            "AlbumArt": "https://media.pitchfork.com/photos/5ff365a123155174547abec2/1:1/w_320/Foo-Fighters.jpg"
+        },
+        {
+            "ID": "2",
+            "Title": "Glowing in the Dark",
+            "Artist": "Django Django",
+            "Release_date": "02/12/2021",
+            "Duration": "00:44",
+            "Genre": "Pop",
+            "AlbumArt": "https://i1.wp.com/www.musicomh.com/wp-content/uploads/2021/02/django-django-glowing-in-the-dark.jpg?fit=640%2C640&ssl=1"
+        },
+        {
+            "ID": "3",
+            "Title": "Tyron",
+            "Artist": "slowthai",
+            "Release_date": "02/12/2021",
+            "Duration": "00:35",
+            "Genre": "Hip-Hop/Rap",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/d/dc/Slowthai_-_Tyron.png"
+        },
+        {
+            "ID": "4",
+            "Title": "Arrival of the New Elders",
+            "Artist": "Elephant9",
+            "Release_date": "02/12/2021",
+            "Duration": "01:11",
+            "Genre": "Jazz",
+            "AlbumArt": "https://images.roughtrade.com/product/images/files/000/209/491/original/elephant9_arrival_of_the_new_elders.jpg?1611071925t"
+        },
+        {
+            "ID": "5",
+            "Title": "0202",
+            "Artist": "The Reubens",
+            "Release_date": "02/12/2021",
+            "Duration": "00:38",
+            "Genre": "Rock",
+            "AlbumArt": "https://images.genius.com/3686765620550faec8182141852ad93f.1000x1000x1.jpg"
+        },
+        {
+            "ID": "6",
+            "Title": "And It's Still Alright",
+            "Artist": "Nathaniel Rateliff",
+            "Release_date": "02/14/2021",
+            "Duration": "00:42",
+            "Genre": "Alternative",
+            "AlbumArt": "https://cdn2.thelineofbestfit.com/images/remote/https_cdn2.thelineofbestfit.com/media/2014/NR_ItsStillAlright_Cover_5inchprint-1024x1024.jpg"
+        },
+        {
+            "ID": "7",
+            "Title": "Drug of Choice",
+            "Artist": "Cube",
+            "Release_date": "02/12/2021",
+            "Duration": "00:38",
+            "Genre": "Electronic",
+            "AlbumArt": "https://f4.bcbits.com/img/a4073958906_16.jpg"
+        },
+        {
+            "ID": "8",
+            "Title": "Heading into the Fire",
+            "Artist": "Toledo Steel",
+            "Release_date": "02/12/2021",
+            "Duration": "00:41",
+            "Genre": "Metal",
+            "AlbumArt": "https://assets.bigcartel.com/product_images/280926980/Album+Small.jpg?auto=format&fit=max&w=1200"
+        },
+        {
+            "ID": "9",
+            "Title": "Dua Lipa",
+            "Artist": "Dua Lopa",
+            "Release_date": "06/02/2021",
+            "Duration": "01:00",
+            "Genre": "Pop",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/2/20/Dua_Lipa_%28album%29.png"
+        },
+        {
+            "ID": "10",
+            "Title": "Starboy",
+            "Artist": "The Weeknd",
+            "Release_date": "11/25/2016",
+            "Duration": "01:08",
+            "Genre": "R&B/Soul",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/3/39/The_Weeknd_-_Starboy.png"
+        },
+        {
+            "ID": "11",
+            "Title": "AM",
+            "Artist": "TArctic Monkeys",
+            "Release_date": "09/09/2013",
+            "Duration": "00:42",
+            "Genre": "Alternative",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg/440px-%22AM%22_%28Arctic_Monkeys%29.jpg"
+        },
+        {
+            "ID": "12",
+            "Title": "Southern Style",
+            "Artist": "Darius Rucker",
+            "Release_date": "03/31/2015",
+            "Duration": "00:54",
+            "Genre": "Country",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/4/45/Southern_Style_Tour_%28Darius_Rucker_concert_tour_poster%29.jpg"
+        },
+        {
+            "ID": "13",
+            "Title": "Folk Singer",
+            "Artist": "Muddy Waters",
+            "Release_date": "01/30/1964",
+            "Duration": "00:49",
+            "Genre": "Blues",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/9/98/Muddywatersfolksinger.jpg"
+        },
+        {
+            "ID": "14",
+            "Title": "Fire",
+            "Artist": "Ohio Players",
+            "Release_date": "11/NA/1974",
+            "Duration": "00:37",
+            "Genre": "R&B/Soul",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/8/8d/Ohio_players_fire.jpg"
+        },
+        {
+            "ID": "15",
+            "Title": "Ride the Lightning",
+            "Artist": "Metallica",
+            "Release_date": "07/27/1984",
+            "Duration": "00:47",
+            "Genre": "Metal",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/f/f4/Ridetl.png"
+        },
+        {
+            "ID": "16",
+            "Title": "Hot Sauce Committee Part Two",
+            "Artist": "Beastie Boys",
+            "Release_date": "05/03/2011",
+            "Duration": "00:44",
+            "Genre": "Hip-Hop/Rap",
+            "AlbumArt": "https://images.squarespace-cdn.com/content/v1/593070a42994cad2710a6439/1543504937455-ZTI3HZZIONX6SJS3MIDK/ke17ZwdGBToddI8pDm48kAf-OpKpNsh_OjjU8JOdDKBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzAFzFJoCInLPKyj9AG8yKe7-Q2aFvP177fkO9TY_-rz5WoqqTEZpmj4yDEOdwKV68/hh.jpg"
+        },
+        {
+            "ID": "17",
+            "Title": "Bitches Brew",
+            "Artist": "Miles Davis",
+            "Release_date": "03/30/1970",
+            "Duration": "01:34",
+            "Genre": "Jazz",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/7/72/Bitches_brew.jpg"
+        },
+        {
+            "ID": "18",
+            "Title": "The Real Deal: Greatest Hist, Volume 2",
+            "Artist": "Steive Ray Vaughn",
+            "Release_date": "NA/NA/1999",
+            "Duration": "01:11",
+            "Genre": "Classic Rock",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/9/9c/Real_Deal_Volume_2_cover.JPG"
+        },
+        {
+            "ID": "19",
+            "Title": "Young Romance",
+            "Artist": "Roosevelt",
+            "Release_date": "09/28/2018",
+            "Duration": "01:21",
+            "Genre": "Electronic",
+            "AlbumArt": "https://images-na.ssl-images-amazon.com/images/I/71BQBAsHrAL._SL1200_.jpg"
+        },
+        {
+            "ID": "20",
+            "Title": "I Used to Know Her: Part 2",
+            "Artist": "H.E.R.",
+            "Release_date": "11/02/2018",
+            "Duration": "00:28",
+            "Genre": "R&B/Soul",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/3/32/HER_UsedToKnow2.jpg"
+        },
+        {
+            "ID": "21",
+            "Title": "The Battle of Los Angles",
+            "Artist": "Rage Against the Machine",
+            "Release_date": "11/02/1999",
+            "Duration": "00:45",
+            "Genre": "Hard Rock",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/5/51/RAtM-BattleofLosAngeles.jpeg"
+        },
+        {
+            "ID": "22",
+            "Title": "‘Awaken, My Love!'",
+            "Artist": "Childish Gambino",
+            "Release_date": "12/02/2016",
+            "Duration": "00:49",
+            "Genre": "R&B/Soul",
+            "AlbumArt": "https://media.pitchfork.com/photos/5929bfdcc0084474cd0c30d7/1:1/w_600/33796b07.jpg"
+        },
+        {
+            "ID": "23",
+            "Title": "America, Location 12",
+            "Artist": "Dispatch",
+            "Release_date": "06/02/2017",
+            "Duration": "00:49",
+            "Genre": "Indie",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dispatch-america-location-12.jpg"
+        },
+        {
+            "ID": "24",
+            "Title": "Bleed America",
+            "Artist": "Jimmy Eat World",
+            "Release_date": "07/24/2001",
+            "Duration": "00:46",
+            "Genre": "Alternative",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/3/37/Bleedamerican.jpg"
+        },
+        {
+            "ID": "25",
+            "Title": "Good Things",
+            "Artist": "Aloe Blacc",
+            "Release_date": "09/28/2010",
+            "Duration": "00:47",
+            "Genre": "R&B/Soul",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/7/7a/Goodthings.jpg"
+        },
+        {
+            "ID": "26",
+            "Title": "Punisher",
+            "Artist": "Phoebe Bridgers",
+            "Release_date": "06/17/2020",
+            "Duration": "00:40",
+            "Genre": "Indie",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/2/23/Phoebe_Bridgers_Punisher_%282020%29.png"
+        },
+        {
+            "ID": "27",
+            "Title": "Tangled Up",
+            "Artist": "Thomas Rhett",
+            "Release_date": "09/25/2015",
+            "Duration": "00:44",
+            "Genre": "Country",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/a/af/TangledUp.jpg"
+        },
+        {
+            "ID": "28",
+            "Title": "Earthandsky",
+            "Artist": "Of Mice & Men",
+            "Release_date": "09/27/2019",
+            "Duration": "00:44",
+            "Genre": "Hard Rock",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/9/90/OM%26M_Earthandsky_cover.jpg"
+        },
+        {
+            "ID": "29",
+            "Title": "Led Zeppelin II",
+            "Artist": "Led Zeppelin",
+            "Release_date": "10/22/1969",
+            "Duration": "00:42",
+            "Genre": "Classic Rock",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/2/20/Led_Zeppelin_-_Led_Zeppelin_II.jpg"
+        },
+        {
+            "ID": "30",
+            "Title": "Chulahoma",
+            "Artist": "The Black Keys",
+            "Release_date": "05/02/2006",
+            "Duration": "00:27",
+            "Genre": "Blues",
+            "AlbumArt": "https://upload.wikimedia.org/wikipedia/en/0/08/Chulahoma-_The_Songs_Of_Junior_Kimbrough.jpg"
+        }
+    ]
+}

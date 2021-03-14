@@ -1,11 +1,24 @@
 .MenuAlbums {
-    justify-content: center;
-    align-content: center;
+    justify-items: normal;
+    align-content: left;
     display: flex;
     flex-direction: column;
-    padding: 0 1.5em;
+    padding: 0 .5rem;
+    width: 65rem;
+    height: 97vh;
+}
+
+.MenuAlbumsHeader {
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
     width: auto;
-    min-width: 45rem;
+    height: auto;
+    z-index: 1;
+    margin: 0 0 .2rem 0;
+    box-shadow: 0 .75rem 1rem rgba(10, 10, 10, 0.3);
 }
 
 .MenuSearch {
@@ -14,41 +27,70 @@
     justify-self: center;
     display: flex;
     flex-direction: row;
-    width: auto;
-    margin: .5em 0 2em 0;
+    width: 64.75rem;
+    padding: .5rem 0;
+    font-family: Roboto;
+    font-size: 1rem;
+    color: #cccccc;
+    background-color:#335080;
 }
 
-.MenuBar {
+.MenuSearchBar {
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
     align-content: center;
     display: flex;
-    width: 25rem;
-    margin: 0 1.5em 0 0;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    box-shadow: 0 .2rem .3rem rgba(10, 10, 10, 0.3);
+}
+
+.MenuSearchText{
+    justify-self: left;
+    vertical-align: bottom;
+    font-family: Roboto;
+    font-size: 1.3rem;
+    color: #cccccc;
+    padding: .5rem 1rem;
+    background-color: #1E2838;
 }
 
 .MenuInput {
-    justify-self: left;
-    width: 100%;
-    display: flex;
+    background-color: #ffffff;
+    border: 4px solid #1E2838;
+    border-radius: 0;
+    width: 35rem;
+    font-family: Roboto;
+    font-size: 1rem;
     color: #1E2838;
-    border-color: #4E6891;
+    padding: .25rem;
 }
 
-.MenuSearch Button {
-    width: 10rem;
-    background-color: #4E6891;
-    color: #cccccc;
-    border-radius: 0;
-}
-
-.MenuSearch Button:hover {
-    background-color: #555555;
-    color: #cccccc;
-    border-radius: 0;
-}
-
-.AlbumCards {
-    display: flex;
+.GenreSearch {
+    justify-content:center;
+    align-content: center;
+    display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 0 0 .25em;
+    width: 64.75rem;
+    padding: 0 0 .25rem 0;
+    background-color: #335080;
+}
+
+.GenreSearch Button {
+    color: #cccccc;
+    font-size: .7rem;
+    border-radius: 0;
+}
+
+.GenreSearch Button:hover {
+    background-color: #4E6891;
+    border-radius: 0;
+    box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3);
+}
+
+.MenuAlbumList {
+    width: 65rem;
+    z-index: 0;
 }

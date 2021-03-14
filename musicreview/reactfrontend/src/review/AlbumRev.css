@@ -8,8 +8,8 @@
 
 .RevAlbumImg {
     display: flex;
-    width: auto;
-    max-width: 20rem;
+    width: 20rem;
+    height: 20rem;
     justify-self: center;
     margin-right: 1rem;
 }
@@ -27,18 +27,14 @@
     justify-content: left;
     display: flex;
     flex-direction: row;
+    font-size: 3rem;
 }
 
 .RevAlbumTitle {
-    font-size: 2em;
     margin-right: 2rem;
-    width: 23rem;
+    width: 30rem;
     display: flex;
     flex-wrap: wrap;
-}
-
-.RevHeart {
-    font-size: 2em;
 }
 
 .RevAlbumDetails {
@@ -53,22 +49,22 @@
 
 .RevAlbumLine {
     justify-content: left;
-    align-content: left;
+    justify-self: left;
     display: flex;
     flex-direction: row;
-    margin-bottom: .15em;
-    font-size: 1.2em;
-    line-height: 1.3em;
+    margin-bottom: .05rem;
+    font-size: .8rem;
+    line-height: 1rem;
 }
 
 .RevAlbumLineDesc {
-    width: 4.5em;
+    width: 4.5rem;
     text-align: right;
-    margin-right: .5em;
+    margin-right: .5rem;
 }
 
 .RevAlbumLineFill {
     display: flex;
     flex-wrap: wrap;
-    width: 6em;
+    width: 8rem;
 }

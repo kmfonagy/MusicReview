@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import './SideMenu.css'
+import tempUsers from '../tempUsers.json';
+import './SideMyRev.css'
 
 class SideMenu extends Component {
     render() {
@@ -13,17 +14,19 @@ class SideMenu extends Component {
                             Menu
                         </Button>
                     </Link>
-                    <Link to="/favorites" style={{ textDecoration: 'none' }}>
+                    <Link to="/my-favorites" style={{ textDecoration: 'none' }}>
                         <Button variant="contained" color="secondary">
                             My Favorites
                         </Button>
                     </Link>
                 </div>
                 <div className="UserInfo">
-                    
+
                 </div>
                 <div className="LoginRevsBtns">
-                    test
+                    {tempUsers.user.filter(user => user.ID == this.props.UserID).map((user) => (
+                        user.Username
+                    ))}
                     <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
                         <Button variant="contained" color="secondary">
                             logout

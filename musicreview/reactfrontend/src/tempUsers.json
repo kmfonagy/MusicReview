@@ -1,0 +1,82 @@
+{
+    "user": [
+        {
+            "ID": "1",
+            "Username": "test",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "2",
+            "Username": "li6htnin6",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "3",
+            "Username": "St34kHam",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "4",
+            "Username": "antMonkey",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "5",
+            "Username": "kang@R00",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "6",
+            "Username": "milk_shalk",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "7",
+            "Username": "Journey-Rocks",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "8",
+            "Username": "CatchEmAll",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "9",
+            "Username": "wilderNes",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "10",
+            "Username": "MetaliDeth",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "11",
+            "Username": "okalee-dokalee",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "12",
+            "Username": "blah-blah",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        },
+        {
+            "ID": "13",
+            "Username": "MusicM4N",
+            "Password": "pass",
+            "Email": "test@gmail.com"
+        }
+    ]
+}
