@@ -1,6 +1,5 @@
 package com.musicreview.musicreview.model;
 
-import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,21 +22,21 @@ public class Review {
     @Column(name = "rating")
     private int rating;
 
-    @Column(name = "description")
+    @Column(name = "descript")
     private String description;
 
     @Column(name = "created_on")
-    private Date created_On;
+    private String created_On;
 
-    @Column(name = "MusicID")
+    @Column(name = "musicID")
     private Integer musicID;
 
-    @Column(name = "UserID")
+    @Column(name = "userID")
     private Integer userID;
 
     @Override
     public String toString() {
-        return "User ID = " + id + " " + "Song Title = " + title + " " + "Rating = " + rating + " " + "Description = "
+        return "User ID = " + id + " " + "Song Title = " + title + " " + "Rating = " + rating + " " + "Descript = "
                 + description + " " + "Created on = " + created_On;
     }
 
@@ -73,11 +72,11 @@ public class Review {
         this.description = description;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return created_On;
     }
 
-    public void setDate(Date created_On) {
+    public void setDate(String created_On) {
         this.created_On = created_On;
     }
 

@@ -4,11 +4,36 @@ import Form from "react-bootstrap/Form";
 import ReviewedList from "./ReviewedList"
 import Star from './Star';
 import { Button, GridList, GridListTile } from '@material-ui/core';
+import { Link, Redirect } from "react-router-dom";
 import tempFavs from '../tempFavs.json';
 import tempReviews from '../tempReviews.json';
 import tempData from '../tempData.json';
 import './MenuRev.css';
 
+const reviewPost = async values => {
+    // have tried two urls, neither work
+    // /api/newReview
+    // and
+    // https://http://localhost:8080/api/newReview
+    const url = '/api/newReview'
+    const resp = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        //I had a couple of issue with 'this' key word
+        //still not accepting the info
+        body: JSON.stringify({
+            date: values.created_on,
+            description: values.description,
+            rating: values.rating,
+            title: values.title,
+            musicID: values.musicID,
+            userID: values.userID
+        })
+    })
+    return resp.json();
+}
 class MenuRev extends Component {
     static defaultProps = { max: 5 };
     constructor(props) {
@@ -82,9 +107,10 @@ class MenuRev extends Component {
         this.setState({ dynamicValue: this.state.value });
     }
 
-    onSubmitForm(event) {
+    async onSubmitForm(event) {
         console.log(this.state);
         event.preventDefault();
+        await reviewPost(this.state);
     }
 
     onClear() {
@@ -94,7 +120,6 @@ class MenuRev extends Component {
                 description: '',
                 created_on: '',
                 rating: 0,
-                MusicID: 0
             }
         )
     }
