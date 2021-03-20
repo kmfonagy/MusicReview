@@ -6,7 +6,7 @@ import "./login.css";
 import { RepeatOneSharp } from "@material-ui/icons";
 
 const loginUser = async (username) => {
-    const url = `http://localhost:8080/api/getByUsername/${username.username}`
+    const url = `/api/getByUsername/${username.username}`
     const resp = await fetch(url)
     return resp.json();
 };

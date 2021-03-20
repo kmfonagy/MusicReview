@@ -11,25 +11,19 @@ import tempData from '../tempData.json';
 import './MenuRev.css';
 
 const reviewPost = async values => {
-    // have tried two urls, neither work
-    // /api/newReview
-    // and
-    // https://http://localhost:8080/api/newReview
     const url = '/api/newReview'
     const resp = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        //I had a couple of issue with 'this' key word
-        //still not accepting the info
         body: JSON.stringify({
             date: values.created_on,
             description: values.description,
-            rating: values.rating,
+            rating: values.dynamicValue,
             title: values.title,
-            musicID: values.musicID,
-            userID: values.userID
+            musicID: values.MusicID,
+            userID: values.UserID
         })
     })
     return resp.json();
@@ -40,7 +34,7 @@ class MenuRev extends Component {
         super(props)
         this.state = {
             UserID: this.props.UserID,
-            MusicID: 0,
+            MusicID: 1,
             dynamicValue: props.value,
             value: 0,
             rating: 0,
@@ -96,7 +90,7 @@ class MenuRev extends Component {
             value: newValue,
             dynamicValue: newValue
         });
-        console.log(this.state.value)
+        console.log(this.state.dynamicValue)
     }
 
     handleMouseEnter(newValue) {
