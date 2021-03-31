@@ -30,8 +30,8 @@ public class Music {
     @Column(name = "Artist")
     private String artist;
 
-    @Column(name = "AlbumArt")
-    private String albumArt;
+    @Column(name = "Album_Art")
+    private String album_Art;
 
     public Integer getId() {
         return id;
@@ -81,12 +81,12 @@ public class Music {
         this.artist = artist;
     }
 
-    public String getAlbumArt() {
-        return artist;
+    public String getAlbum_Art() {
+        return album_Art;
     }
 
-    public void setAlbumArt(String albumArt) {
-        this.albumArt = albumArt;
+    public void setAlbum_Art(String album_art) {
+        this.album_Art = album_Art;
     }
 
 }

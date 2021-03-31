@@ -9,39 +9,44 @@ class MenuFavs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            music: []
+            music: [],
+            faved: [],
+            albums: []
         }
         this.filterMusic = []
         this.UserID = this.props.UserID;
     }
 
     componentDidMount() {
-        console.log(tempFavs.favorites)
-        let favorite = tempFavs.favorites;
-        let music = tempData.music;
-        let filterFav = [];
-        let filterMusic = this.filterMusic;
-
-        filterFav = favorite.filter(fav => fav.UserID == this.UserID);
-
-        music.forEach(album =>
-            filterFav.forEach(fav => {
-                if (album.ID == fav.MusicID) {
-                    filterMusic.push({
-                        key: album.ID,
-                        ID: album.ID,
-                        Title: album.Title,
-                        Artist: album.Artist,
-                        AlbumArt: album.AlbumArt,
-                        Genre: album.Genre
-                    })
-                }
-            }))
-
-        console.log(filterFav, filterMusic)
-        this.setState({
-            music: filterMusic
-        })
+        Promise.all([
+            fetch('/api/getFavoriteByUserId/' + this.UserID).then(res => res.json()),
+            fetch('/api/getAllAlbums').then(res => res.json())
+        ]).then(([favs, albs]) => {
+            let filterMusic = this.filterMusic
+            this.setState({
+                faved: favs,
+                albums: albs
+            })
+            this.state.albums.forEach(album => 
+                this.state.faved.forEach(fav => {
+                    if (album.id == fav.musicID) {
+                        filterMusic.push({
+                            key: album.id,
+                            ID: album.id,
+                            Title: album.title,
+                            Artist: album.artist,
+                            Album_Art: album.album_Art,
+                            Genre: album.genre
+                        })
+                    }
+                }))
+            this.setState({
+                music: this.filterMusic
+            })
+            console.log(this.state.music)
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     handleGenreSearch = name => {
@@ -80,12 +85,13 @@ class MenuFavs extends Component {
 
         const music = this.state.music;
         const albums = music.map(album => (
-            <GridListTile>
+            <GridListTile key={album.ID}>
                 <Album
                     key={album.ID}
+                    id={album.ID}
                     title={album.Title}
                     artist={album.Artist}
-                    img={album.AlbumArt}
+                    img={album.Album_Art}
                 />
             </GridListTile>
         ))

@@ -5,7 +5,7 @@ import './Album.css';
 class Album extends Component {
     render() {
         return (
-            <div className="AlbumMain">
+            <div className="AlbumMain" key={this.props.id}>
                 <Link id='album-link' to="/album-review" style={{ textDecoration: 'none' }}>
                     <div className="AlbumImg">
                         <img src={this.props.img} alt={this.props.title} />

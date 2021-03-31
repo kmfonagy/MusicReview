@@ -16,7 +16,7 @@ export default function ReviewedList() {
                         return true
                     }
                 }).map((item) => (
-                    <GridListTile className="RevItem" key={item.img} cols={item.cols || 1}>
+                    <GridListTile className="RevItem" key={item.id} cols={item.cols || 1}>
                         <div className="RevItemHead">
                             <div className="ReviewedTitle">
                                 {item.title}
