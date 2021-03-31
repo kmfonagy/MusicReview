@@ -42,3 +42,7 @@
 #album-link {
     margin: 0 0 .1rem 0;
 }
+
+#album-link:hover {
+    outline: 2px solid #4E6891;
+}

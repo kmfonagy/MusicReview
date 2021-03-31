@@ -85,7 +85,7 @@ public class Music {
         return album_Art;
     }
 
-    public void setAlbum_Art(String album_art) {
+    public void setAlbum_Art(String album_Art) {
         this.album_Art = album_Art;
     }
 

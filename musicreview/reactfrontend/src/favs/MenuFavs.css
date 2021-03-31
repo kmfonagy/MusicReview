@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 .5rem;
-    width: 65rem;
+    width: 130rem;
     height: 65.75rem;
 }
 
@@ -29,7 +29,7 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-    width: 64.75rem;
+    width: 129.5rem;
     padding: .5rem 0;
     font-family: Roboto;
     font-size: 1rem;
@@ -48,30 +48,91 @@
     color: #cccccc;
     padding: .5rem 1rem;
     background-color: #1E2838;
+    box-shadow: 0 .2rem .3rem rgba(10, 10, 10, 0.3);
 }
 
-.MyFavsGenreSearch {
+.FavFilter {
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 3rem;
+    background-color: #1E2838;
+    box-shadow: 0 .2rem .3rem rgba(10, 10, 10, 0.3);
+}
+
+.FavFilterText {
+    justify-self: left;
+    vertical-align: bottom;
+    font-family: Roboto;
+    font-size: 1.3rem;
+    color: #cccccc;
+    padding: .5rem 1rem;
+}
+
+.FavDropdown {
+    vertical-align: middle !important;
+    justify-content: center !important;
+    align-content: center !important;
+}
+
+.FavDropdown button:hover{
+    border: none !important;
+    outline: none !important;
+    background-color: #4E6891 !important;
+}
+
+.FavGenreToggle {
+    justify-self: left !important;
+    vertical-align: middle !important;
+    font-family: Roboto !important;
+    font-size: 1.3rem !important;
+    color: #cccccc !important;
+    padding: .2rem 4rem !important;
+    margin: .25rem;
+    background-color: #335080 !important;
+    border: none;
+}
+
+.FavGenreToggle:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.FavGenreDropdown {
     justify-content:center;
     align-content: center;
     display:flex;
-    flex-direction: row;
-    width: 64.75rem;
-    background-color: #335080;
+    flex-direction: column;
+    width: 11.4rem;
+    height: auto;
+    background-color: #335080 !important;
+    border: none;
+    box-shadow: 0 .2rem .3rem rgba(10, 10, 10, 0.3);
 }
 
-.MyFavsGenreSearch Button {
-    color: #cccccc;
-    font-size: .7rem;
-    border-radius: 0;
+.FavGenreButton {
+    text-align: center !important;
+    font-family: Roboto !important;
+    text-decoration: none !important;
+    color: #cccccc !important;
+    font-size: 1rem !important;
+    padding: .25rem 0;
+    border-radius: 0 !important;
 }
 
-.MyFavsGenreSearch Button:hover {
-    background-color: #4E6891;
-    border-radius: 0;
-
+.FavGenreButton:hover {
+    background-color: #4E6891 !important;
+    border-radius: 0 !important;
+    border: none;
+    box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3) !important;
 }
 
 .AlbumCards {
-    width: 65rem;
+    width: 130rem;
     z-index: 0;
 }

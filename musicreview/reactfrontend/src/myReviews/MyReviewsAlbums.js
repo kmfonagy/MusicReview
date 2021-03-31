@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, GridList, GridListTile } from '@material-ui/core';
+import { Dropdown } from 'react-bootstrap';
 import Album from '../menu/Album';
 import tempData from '../tempData.json';
 import tempReviews from '../tempReviews.json';
@@ -45,19 +46,52 @@ class MyReviewsAlbums extends Component {
     }
 
     handleGenreSearch = name => {
-        let filterAlbums = [];
         if (name === "All") {
-            filterAlbums = this.filterMusic;
+            Promise.all([
+                fetch('/api/getAllAlbums').then(res => res.json())
+            ]).then(([allAlbums]) => {
+                this.setState(
+                    {
+                        albums: allAlbums
+                    }
+                )
+                console.log(this.state.albums)
+            }).catch((error) => {
+                console.log(error);
+            });
         } else {
-            filterAlbums = this.filterMusic.filter(
-                album => album.Genre === name
-            );
+            Promise.all([
+                fetch('/api/getAllAlbums').then(res => res.json())
+            ]).then(([allAlbums]) => {
+                let filterAlbums = []
+                if (name === "Classic Rock"){
+                    for (let i = 0; i < allAlbums.length; i++) {
+                        if (Number(allAlbums[i].release_Date) < 1996 && 
+                            (allAlbums[i].genre === "Rock" || allAlbums[i].genre === "Metal" ||
+                            allAlbums[i].genre === "Alternative" || allAlbums[i].genre === "Hard Rock" ||
+                            allAlbums[i].genre === "Punk" || allAlbums[i].genre === "Singer/Songwriter") 
+                        ) {
+                            console.log(allAlbums[i])
+                            filterAlbums.push(allAlbums[i])
+                        }
+                    }
+                }
+                for (let i = 0; i < allAlbums.length; i++) {
+                    if (allAlbums[i].genre === name) {
+                        console.log(allAlbums[i])
+                        filterAlbums.push(allAlbums[i])
+                    }
+                }
+                this.setState(
+                    {
+                        albums: filterAlbums
+                    }
+                )
+                console.log(this.state.albums)
+            }).catch((error) => {
+                console.log(error);
+            });
         }
-
-        this.setState({
-            music: filterAlbums
-        })
-        console.log(this.state.albums)
     }
 
     render() {
@@ -65,17 +99,25 @@ class MyReviewsAlbums extends Component {
             { name: "All", value: "All" },
             { name: "Alternative", value: "Alternative" },
             { name: "Blues", value: "Blues" },
+            { name: "Christian", value: "Christian" },
             { name: "Classic Rock", value: "Classic Rock" },
+            { name: "Classical", value: "Classical" },
             { name: "Country", value: "Country" },
+            { name: "Dance", value: "Dance" },
             { name: "Electronic", value: "Electronic" },
             { name: "Hard Rock", value: "Hard Rock" },
             { name: "Hip-Hop/Rap", value: "Hip-Hop/Rap" },
-            { name: "Indie", value: "Indie" },
+            { name: "Holiday", value: "Holiday" },
             { name: "Jazz", value: "Jazz" },
+            { name: "K-Pop", value: "K-Pop" },
+            { name: "Latin", value: "Latin" },
             { name: "Metal", value: "Metal" },
             { name: "Pop", value: "Pop" },
             { name: "R&B/Soul", value: "R&B/Soul" },
-            { name: "Rock", value: "Rock" }
+            { name: "Reggae", value: "Reggae" },
+            { name: "Rock", value: "Rock" },
+            { name: "Singer/Songwriter", value: "Singer/Songwriter" },
+            { name: "Soundtrack", value: "Soundtrack" }
         ];
 
         const music = this.state.music;
@@ -92,20 +134,29 @@ class MyReviewsAlbums extends Component {
         return (
             <div className="MyRevsAlbums">
                 <div className="MyRevsHeader">
-                    <div className="MyRevsHeaderText" >My Reviews</div>
+                    <div className="MyRevsHeaderTitle">
+                        <div className="MyRevsHeaderText" >My Reviews</div>
+                        <div className="MyRevsFilter">
+                            <div className="MyRevsFilterText">Filter:</div>
+                            <Dropdown className="RevDropdown">
+                                <Dropdown.Toggle variant="success" className="RevGenreToggle">
+                                    Genre
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu className="RevGenreDropdown">
+                                    {buttons.map(({ name, value }) => 
+                                        <Dropdown.Item 
+                                            className="RevGenreButton"
+                                            key={name}
+                                            value={value}
+                                            onClick={this.handleGenreSearch.bind(this, name)}
+                                        >{name}</Dropdown.Item>
+                                    )}
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        </div>
+                    </div>
                 </div>
-                <div className="MyRevsGenreSearch">
-                    {buttons.map(({ name, value }) =>
-                        <Button
-                            key={name}
-                            value={value}
-                            onClick={this.handleGenreSearch.bind(this, name)}
-                        >
-                            {name}
-                        </Button>
-                    )}
-                </div>
-                <GridList cellHeight={'auto'} className="AlbumCards" cols={6}>
+                <GridList cellHeight={'auto'} className="AlbumCards" cols={12}>
                     {albums}
                 </GridList>
             </div>
