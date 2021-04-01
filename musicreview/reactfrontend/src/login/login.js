@@ -15,6 +15,7 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: 0,
             username: '',
             password: '',
             retrievedPass: '',
@@ -52,7 +53,8 @@ class Login extends Component {
                 return this.setState({ error: 'Username does not exist' })
             }
             const retPass = response.password;
-            this.setState({ ...this.state, retrievedPass: retPass })
+            const retID = response.id;
+            this.setState({ ...this.state, retrievedPass: retPass, id: retID })
             this.CheckPass()
         })
     }
@@ -60,6 +62,8 @@ class Login extends Component {
     CheckPass() {
         if (this.state.retrievedPass === this.state.password) {
             console.log("success");
+            console.log(this.state)
+            this.props.setUserID(this.state.id);
             this.setState({
                 redirect: true,
             })

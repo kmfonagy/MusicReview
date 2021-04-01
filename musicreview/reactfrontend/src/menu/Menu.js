@@ -4,23 +4,22 @@ import MenuAlbums from './MenuAlbums';
 import './Menu.css';
 
 class Menu extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            UserID: this.props.UserID
+            UserID: this.props.userID
         }
-
-        this.id = 1;
+        console.log(this.props)
     }
     render() {
         return (
             <div className="Menu">
                 <div className="MenuSide">
-                    <SideMenu UserID={this.id} />
+                    <SideMenu UserID={this.state.UserID} />
                 </div>
                 <div className="MenuMain">
-                    
-                    <MenuAlbums UserID={this.id} />
+
+                    <MenuAlbums UserID={this.state.UserID} />
                 </div>
             </div>
         )

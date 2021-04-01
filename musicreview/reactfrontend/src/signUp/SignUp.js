@@ -106,7 +106,7 @@ class SignUp extends Component {
 
     render() {
         if (this.state.redirect) {
-            return <Redirect to="/menu" />
+            return <Redirect to="/" />
         }
 
         return (
@@ -116,7 +116,7 @@ class SignUp extends Component {
                         this.state.error &&
                         <h4 onClick={this.dismissError}> {this.state.error} </h4>
                     }
-                    
+
                     <div className="SignUpHeader">
                         <div className="SignUpHeaderTitle">
                             Create Your MusicReview Account
@@ -134,7 +134,7 @@ class SignUp extends Component {
                             type="text"
                             placeholder="Username"
                             value={this.state.username}
-                            onChange={this.handleUserChange} 
+                            onChange={this.handleUserChange}
                         />
                         <input
                             className="SignUpInputs"
@@ -148,7 +148,7 @@ class SignUp extends Component {
                             type="password"
                             placeholder="Password"
                             value={this.state.password}
-                            onChange={this.handlePassChange}/>
+                            onChange={this.handlePassChange} />
                     </div>
                     <div className="SignUpBtnShelf">
                         <Button onClick={this.handleSubmit} variant="contained" color="secondary">
