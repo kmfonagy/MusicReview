@@ -51,7 +51,7 @@ class MenuRev extends Component {
         this.onSubmitForm = this.onSubmitForm.bind(this);
         this.Clear = this.onClear.bind(this);
 
-        this.album = 1;
+        /* Update with local storage get */this.album = 4;
         this.revDis = false;
     }
 
@@ -144,19 +144,20 @@ class MenuRev extends Component {
             <div className="MenuRev">
                 <GridList cellHeight={'auto'} className='MenuRevAlbum' cols={1}>
                     <GridListTile className="MenuRevAlbum">
-                        {tempData.music.filter(music => music.ID == this.album).map((p) => (
-                            <AlbumRev
-                                key={this.album}
-                                img={p.AlbumArt}
-                                title={p.Title}
-                                artist={p.Artist}
-                                duration={p.Duration}
-                                release_date={p.Release_date}
-                                genre={p.Genre}
-                                MusicID={this.album}
-                                UserID={this.state.UserID}
-                            />
-                        ))}
+                        {/* replace tempData.music with API call json */
+                            tempData.music.filter(music => music.ID == this.album).map((p) => (
+                                <AlbumRev
+                                    key={this.album}
+                                    img={p.AlbumArt}
+                                    title={p.Title}
+                                    artist={p.Artist}
+                                    duration={p.Duration}
+                                    release_date={p.Release_date}
+                                    genre={p.Genre}
+                                    MusicID={this.album}
+                                    UserID={this.state.UserID}
+                                />
+                            ))}
                     </GridListTile>
                     {reviewed ?
                         <GridList id='MenuRevLeft' cellHeight={'auto'}>

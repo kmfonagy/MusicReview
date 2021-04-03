@@ -54,6 +54,7 @@ class Login extends Component {
             }
             const retPass = response.password;
             const retID = response.id;
+            localStorage.setItem('userID', retID)
             this.setState({ ...this.state, retrievedPass: retPass, id: retID })
             this.CheckPass()
         })
@@ -63,7 +64,6 @@ class Login extends Component {
         if (this.state.retrievedPass === this.state.password) {
             console.log("success");
             console.log(this.state)
-            this.props.setUserID(this.state.id);
             this.setState({
                 redirect: true,
             })

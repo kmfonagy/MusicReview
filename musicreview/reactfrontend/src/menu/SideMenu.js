@@ -18,8 +18,8 @@ class SideMenu extends Component {
         ]).then(([allUsers]) => {
             console.log(allUsers)
             for (let i = 0; 0 < allUsers.length; i++) {
-                if (allUsers[i].id === this.props.UserID) {
-                    console.log(allUsers[i].id, this.props.UserID)
+                if (allUsers[i].id == localStorage.getItem("userID")) {
+                    console.log(allUsers[i].id, localStorage.getItem("userID"))
                     this.setState({
                         user: allUsers[i].name
                     })
@@ -31,6 +31,7 @@ class SideMenu extends Component {
         });
     }
     render() {
+        console.log(this.state.user)
         return (
             <div className="SideMenu">
                 <div className="UserMenuBtns">

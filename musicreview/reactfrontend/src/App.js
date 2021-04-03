@@ -16,22 +16,11 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      UserID: 0,
+      UserID: localStorage.getItem("userID"),
       AlbumID: 0
     }
   }
-  UpdateUserID = (id) => {
-    this.setState({
-      UserID: id
-    })
-    console.log("AppUserID = " + this.state.UserID)
-  }
 
-  UpdateAlbumID = id => {
-    this.setState({
-      AlbumID: id
-    })
-  }
   render() {
     return (
       <div className="App">
