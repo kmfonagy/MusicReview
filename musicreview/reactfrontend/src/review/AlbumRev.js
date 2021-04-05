@@ -37,7 +37,7 @@ class AlbumRev extends Component {
                         </div>
                         <div className="RevAlbumLine">
                             <div className="RevAlbumLineDesc">Duration:</div>
-                            <div className="RevAlbumLineFill">{this.props.duration}</div>
+                            <div className="RevAlbumLineFill">{this.props.duration} minutes</div>
                         </div>
                     </div>
                 </div>
