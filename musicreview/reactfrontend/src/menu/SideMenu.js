@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import './SideMenu.css'
+import './SideMenu.css';
 
 class SideMenu extends Component {
     constructor(props) {
@@ -9,7 +9,6 @@ class SideMenu extends Component {
         this.state = {
             user: "",
         }
-
     }
 
     componentDidMount() {
@@ -17,6 +16,7 @@ class SideMenu extends Component {
             fetch('/api/getAllUsers').then(res => res.json())
         ]).then(([allUsers]) => {
             console.log(allUsers)
+
             for (let i = 0; 0 < allUsers.length; i++) {
                 if (allUsers[i].id == localStorage.getItem("userID")) {
                     console.log(allUsers[i].id, localStorage.getItem("userID"))
@@ -47,10 +47,10 @@ class SideMenu extends Component {
                     </Link>
                 </div>
                 <div className="UserMenuInfo">
-
+                    
                 </div>
                 <div className="LogOutMenuBtns">
-                    {this.state.user}
+                    <Typography>{this.state.user}</Typography>
                     <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
                         <Button variant="contained" color="secondary">
                             Logout

@@ -8,7 +8,6 @@ import SignUp from './signUp/SignUp';
 import './App.css';
 import { Route } from "react-router-dom";
 import { Switch } from "react-router";
-import { RecentActorsSharp } from '@material-ui/icons';
 import React from 'react';
 
 
@@ -17,10 +16,11 @@ class App extends React.Component {
     super()
     this.state = {
       UserID: localStorage.getItem("userID"),
-      AlbumID: 0
-    }
-  }
 
+      AlbumID: localStorage.getItem('albumID')
+    }
+    console.log("App.js AlbumID" + this.state.AlbumID)
+  }
   render() {
     return (
       <div className="App">
@@ -31,10 +31,15 @@ class App extends React.Component {
           <Route path='/menu' render={
             props => <Menu {...props} userID={this.state.UserID} />
           } />
-          <Route path='/my-favorites' component={Favorites} />
-          <Route path='/review' component={Review} />
-          <Route path='/album-review' component={Review} />
-          <Route path='/my-reviews' component={MyReviews} />
+          <Route path='/my-favorites' render={
+            props => <Favorites {...props} userID={this.state.UserID} />
+          } />
+          <Route path='/album-review/:id' render={
+            props => <Review {...props} userID={this.state.UserID} />
+          } />
+          <Route path='/my-reviews' render={
+            props => <MyReviews {...props} userID={this.state.UserID} />
+          } />
           <Route path='/sign-up' component={SignUp} />
         </Switch>
       </div>

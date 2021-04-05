@@ -7,19 +7,17 @@ class Menu extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            UserID: this.props.UserID
+            UserID: localStorage.getItem("userID")
         }
-
-        this.id = 1;
     }
     render() {
         return (
             <div className="Favs">
                 <div className="FavsSide">
-                    <SideFavs UserID={this.id} />
+                    <SideFavs UserID={this.state.UserID} />
                 </div>
                 <div className="FavsMain">
-                    <MenuFavs UserID={this.id} />
+                    <MenuFavs UserID={this.state.UserID} />
                 </div>
             </div>
         )

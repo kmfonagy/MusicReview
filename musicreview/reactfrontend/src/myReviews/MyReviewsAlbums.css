@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     padding: 0 .5rem;
-    width: 130rem;
-    height: 65.75rem;
+    width: 128rem;
+    height: 97vh;
 }
 
 .MyRevsHeader {
@@ -29,7 +29,7 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-    width: 129.5rem;
+    width: 128rem;
     padding: .5rem 0;
     font-family: Roboto;
     font-size: 1rem;
@@ -132,7 +132,103 @@
     box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3) !important;
 }
 
-.MyRevsAlbumCards {
+.RevAlbumList {
     width: 130rem;
+    z-index: 0;
+    padding-right: 1rem;
+}
+
+.MuiGridList-root{
+    -ms-overflow-style: none;
+}
+
+.MuiGridList-root::-webkit-scrollbar{
+    display: none;
+}
+
+/* @Media CSS */
+
+@media only screen and (max-width: 2230px) {
+
+    .MyRevsAlbums {
+        width: 117.4rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 117.4rem !important;
+    }
+    .RevAlbumList {
+        width: 117.4rem !important;
+    }
+}
+
+@media only screen and (max-width: 2080px) {
+
+    .MyRevsAlbums {
+        width: 106.7rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 106.7rem !important;
+    }
+    .RevAlbumList {
+        width: 106.7rem !important;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .MyRevsAlbums {
+        width: 96rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 96rem !important;
+    }
+    .RevAlbumList {
+        width: 96rem !important;
+    }
+}
+
+@media only screen and (max-width: 1730px) {
+
+    .MyRevsAlbums {
+        width: 85.3rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 85.3rem !important;
+    }
+    .RevAlbumList {
+        width: 85.3rem !important;
+    }
+}
+
+@media only screen and (max-width: 1570px) {
+
+    .MyRevsAlbums {
+        width: 74.6rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 74.6rem !important;
+    }
+    .RevAlbumList {
+        width: 74.6rem !important;
+    }
+}
+
+@media only screen and (max-width: 1410px) {
+
+    .MyRevsAlbums {
+        width: 64rem !important;
+    }
+
+    .MyRevsHeaderTitle {
+        width: 64rem !important;
+    }
+    .RevAlbumList {
+        width: 64rem !important;
+    }
 }
 

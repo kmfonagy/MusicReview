@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 .5rem;
-    width: 130rem;
+    width: 128rem;
     height: 97vh;
 }
 
@@ -27,7 +27,7 @@
     justify-self: center;
     display: flex;
     flex-direction: row;
-    width: 129.5rem;
+    width: 128rem;
     padding: 1rem 0;
     font-family: Roboto;
     font-size: 1rem;
@@ -150,6 +150,101 @@
 }
 
 .MenuAlbumList {
-    width: 130rem;
+    width: 128rem;
     z-index: 0;
+    padding-right: 1rem;
+}
+
+.MuiGridList-root{
+    -ms-overflow-style: none;
+}
+
+.MuiGridList-root::-webkit-scrollbar{
+    display: none;
+}
+
+/* @Media CSS */
+
+@media only screen and (max-width: 2230px) {
+
+    .MenuAlbums {
+        width: 117.4rem !important;
+    }
+
+    .MenuSearch {
+        width: 117.4rem !important;
+    }
+    .MenuAlbumList {
+        width: 117.4rem !important;
+    }
+}
+
+@media only screen and (max-width: 2080px) {
+
+    .MenuAlbums {
+        width: 106.7rem !important;
+    }
+
+    .MenuSearch {
+        width: 106.7rem !important;
+    }
+    .MenuAlbumList {
+        width: 106.7rem !important;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .MenuAlbums {
+        width: 96rem !important;
+    }
+
+    .MenuSearch {
+        width: 96rem !important;
+    }
+    .MenuAlbumList {
+        width: 96rem !important;
+    }
+}
+
+@media only screen and (max-width: 1730px) {
+
+    .MenuAlbums {
+        width: 85.3rem !important;
+    }
+
+    .MenuSearch {
+        width: 85.3rem !important;
+    }
+    .MenuAlbumList {
+        width: 85.3rem !important;
+    }
+}
+
+@media only screen and (max-width: 1570px) {
+
+    .MenuAlbums {
+        width: 74.6rem !important;
+    }
+
+    .MenuSearch {
+        width: 74.6rem !important;
+    }
+    .MenuAlbumList {
+        width: 74.6rem !important;
+    }
+}
+
+@media only screen and (max-width: 1410px) {
+
+    .MenuAlbums {
+        width: 64rem !important;
+    }
+
+    .MenuSearch {
+        width: 64rem !important;
+    }
+    .MenuAlbumList {
+        width: 64rem !important;
+    }
 }

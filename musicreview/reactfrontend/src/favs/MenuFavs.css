@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: column;
     padding: 0 .5rem;
-    width: 130rem;
-    height: 65.75rem;
+    width: 128rem;
+    height: 97vh;
 }
 
 .MyFavsHeader {
@@ -29,7 +29,7 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-    width: 129.5rem;
+    width: 128rem;
     padding: .5rem 0;
     font-family: Roboto;
     font-size: 1rem;
@@ -132,7 +132,102 @@
     box-shadow: 0 .1rem .2rem rgba(10, 10, 10, 0.3) !important;
 }
 
-.AlbumCards {
-    width: 130rem;
+.FavAlbumList {
+    width: 128rem;
     z-index: 0;
+    padding-right: 1rem;
+}
+
+.MuiGridList-root{
+    -ms-overflow-style: none;
+}
+
+.MuiGridList-root::-webkit-scrollbar{
+    display: none;
+}
+
+/* @Media CSS */
+
+@media only screen and (max-width: 2230px) {
+
+    .FavAlbums {
+        width: 117.4rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 117.4rem !important;
+    }
+    .FavAlbumList {
+        width: 117.4rem !important;
+    }
+}
+
+@media only screen and (max-width: 2080px) {
+
+    .FavAlbums {
+        width: 106.7rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 106.7rem !important;
+    }
+    .FavAlbumList {
+        width: 106.7rem !important;
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+
+    .FavAlbums {
+        width: 96rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 96rem !important;
+    }
+    .FavAlbumList {
+        width: 96rem !important;
+    }
+}
+
+@media only screen and (max-width: 1730px) {
+
+    .FavAlbums {
+        width: 85.3rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 85.3rem !important;
+    }
+    .FavAlbumList {
+        width: 85.3rem !important;
+    }
+}
+
+@media only screen and (max-width: 1570px) {
+
+    .FavAlbums {
+        width: 74.6rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 74.6rem !important;
+    }
+    .FavAlbumList {
+        width: 74.6rem !important;
+    }
+}
+
+@media only screen and (max-width: 1410px) {
+
+    .FavAlbums {
+        width: 64rem !important;
+    }
+
+    .MyFavsHeaderTitle {
+        width: 64rem !important;
+    }
+    .FavAlbumList {
+        width: 64rem !important;
+    }
 }

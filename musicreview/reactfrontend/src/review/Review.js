@@ -5,22 +5,15 @@ import './Review.css';
 
 
 class Review extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            UserID: this.props.UserID
-        }
-
-        this.id = 1;
-    }
     render() {
+        console.log("Album ID clicked and rendering in Review " + localStorage.getItem('albumID'))
         return (
             <div className="Review">
                 <div className="ReviewSide">
-                    <SideRev UserID={this.id} />
+                    <SideRev />
                 </div>
                 <div className="ReviewMain">
-                    <MenuRev UserID={this.id} />
+                    <MenuRev musicID={localStorage.getItem('albumID')} />
                 </div>
             </div>
         )

@@ -1,18 +1,27 @@
-.RevList {
-    justify-content: space-evenly;
+.RevListTrue {
     display: flex;
     justify-self: center;
     align-content: center;
     flex-direction: column;
-    width: 50rem;
-    height: 30rem;
+    width: 55rem;
+    height: 73vh;
     color: #cccccc;
-  }
+}
+
+.RevListFalse {
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    flex-direction: column;
+    width: 55rem;
+    height: 52vh;
+    color: #cccccc;
+}
 
 .RevGridList {
     justify-content: center;
     justify-self: center;
-    width: 50rem;
+    width: 55rem;
     height: auto;
 }
 

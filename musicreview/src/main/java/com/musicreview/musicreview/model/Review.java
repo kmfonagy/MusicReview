@@ -26,7 +26,7 @@ public class Review {
     private String description;
 
     @Column(name = "created_on")
-    private String created_On;
+    private String created_on;
 
     @Column(name = "musicID")
     private Integer musicID;
@@ -37,7 +37,7 @@ public class Review {
     @Override
     public String toString() {
         return "User ID = " + id + " " + "Song Title = " + title + " " + "Rating = " + rating + " " + "Descript = "
-                + description + " " + "Created on = " + created_On;
+                + description + " " + "Created on = " + created_on;
     }
 
     public Integer getId() {
@@ -72,12 +72,12 @@ public class Review {
         this.description = description;
     }
 
-    public String getDate() {
-        return created_On;
+    public String getCreated_On() {
+        return created_on;
     }
 
-    public void setDate(String created_On) {
-        this.created_On = created_On;
+    public void setCreated_On(String created_on) {
+        this.created_on = created_on;
     }
 
     public Integer getUserID() {

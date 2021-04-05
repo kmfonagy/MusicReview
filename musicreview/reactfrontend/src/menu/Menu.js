@@ -7,9 +7,10 @@ class Menu extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            UserID: this.props.userID
+            UserID: localStorage.getItem("userID")
         }
-        console.log(this.props)
+
+        console.log("Apps.js UserID is " + this.props.userID + " &amp; Menu.js UserID is " + this.state.UserID)
     }
     render() {
         return (
@@ -18,7 +19,6 @@ class Menu extends Component {
                     <SideMenu UserID={this.state.UserID} />
                 </div>
                 <div className="MenuMain">
-
                     <MenuAlbums UserID={this.state.UserID} />
                 </div>
             </div>

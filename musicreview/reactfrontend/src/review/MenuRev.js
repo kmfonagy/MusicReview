@@ -1,13 +1,9 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component } from 'react';
 import AlbumRev from './AlbumRev';
 import Form from "react-bootstrap/Form";
 import ReviewedList from "./ReviewedList"
 import Star from './Star';
 import { Button, GridList, GridListTile } from '@material-ui/core';
-import { Link, Redirect } from "react-router-dom";
-import tempFavs from '../tempFavs.json';
-import tempReviews from '../tempReviews.json';
-import tempData from '../tempData.json';
 import './MenuRev.css';
 
 const reviewPost = async values => {
@@ -18,10 +14,25 @@ const reviewPost = async values => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            date: values.created_on,
+            created_On: values.created_on,
             description: values.description,
             rating: values.dynamicValue,
             title: values.title,
+            musicID: values.MusicID,
+            userID: values.UserID
+        })
+    })
+    return resp.json();
+}
+
+const myReviewPost = async values => {
+    const url = '/api/newMyReview'
+    const resp = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
             musicID: values.MusicID,
             userID: values.UserID
         })
@@ -33,16 +44,24 @@ class MenuRev extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            UserID: this.props.UserID,
-            MusicID: 1,
+            UserID: localStorage.getItem("userID"),
+            MusicID: this.props.musicID,
             dynamicValue: props.value,
             value: 0,
             rating: 0,
             title: ``,
             description: ``,
             created_on: ``,
-            revDis: false
+            revDis: false,
+            album_Art: ``,
+            album_Title: ``,
+            album_Artist: ``,
+            album_Duration: 0,
+            release_Date: ``,
+            album_Genre: ``
+
         }
+
         this.onTitleChange = this.onInputChange.bind(this, 'title');
         this.onDescChange = this.onInputChange.bind(this, 'description');
         this.handleClick = this.handleClick.bind(this);
@@ -50,28 +69,36 @@ class MenuRev extends Component {
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
         this.onSubmitForm = this.onSubmitForm.bind(this);
         this.Clear = this.onClear.bind(this);
-
-        /* Update with local storage get */this.album = 4;
         this.revDis = false;
     }
 
     componentDidMount() {
-        for (let i = 0; i < tempReviews.review.length; i++) {
-            if (
-                tempReviews.review[i].MusicID == this.album &&
-                tempReviews.review[i].UserID == this.props.UserID
-            ) {
-                this.setState(
-                    { revDis: true }
-                )
+        console.log("musicID passed down " + localStorage.getItem("musicID"))
+        Promise.all([
+            fetch('/api/getMyReviewByUserId/' + this.state.UserID).then(res => res.json()),
+            fetch('/api/getAlbumById/' + this.state.MusicID).then(res => res.json())
+        ]).then(([revs, album]) => {
+            console.log(revs)
+            console.log(album)
+            for (let i = 0; i < revs.length; i++) {
+                if(album.id == revs[i].musicID){
+                    this.setState({
+                        revDis: true
+                    })
+                }
             }
-        }
-        if (tempFavs.favorites.UserID === this.props.UserID) {
-            this.setState(
-                { fav: true }
-            )
-        }
-        console.log(this.state);
+            this.setState({
+                album_Art: album.album_Art,
+                album_Title: album.title,
+                album_Artist: album.artist,
+                album_Duration: album.duration,
+                release_Date: album.release_Date,
+                album_Genre: album.genre
+            })
+            console.log("Album being reviewed " + this.state.album_Title + ", " + this.state.album_Artist + ", " + this.state.album_Art + ", " + this.state.album_Duration + ", " + this.state.album_Genre + ", " + this.state.release_Date + ", " + this.state.revDis)
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     onInputChange(keyName, event) {
@@ -79,8 +106,8 @@ class MenuRev extends Component {
             {
                 [keyName]: event.target.value,
                 rating: this.state.dynamicValue,
-                created_on: new Date().toLocaleString(),
-                MusicID: this.album
+                created_on: new Date().getMonth() + '/' + new Date().getDate() + '/' + new Date().getFullYear(),
+                MusicID: this.state.MusicID
             }
         )
     }
@@ -105,6 +132,10 @@ class MenuRev extends Component {
         console.log(this.state);
         event.preventDefault();
         await reviewPost(this.state);
+        await myReviewPost(this.state);
+        this.setState({
+            revDis: true
+        })
     }
 
     onClear() {
@@ -120,7 +151,6 @@ class MenuRev extends Component {
 
     render() {
 
-        const favorited = this.state.fav;
         const reviewed = this.state.revDis;
         const { dynamicValue } = this.state;
         const starSpans = [];
@@ -144,25 +174,22 @@ class MenuRev extends Component {
             <div className="MenuRev">
                 <GridList cellHeight={'auto'} className='MenuRevAlbum' cols={1}>
                     <GridListTile className="MenuRevAlbum">
-                        {/* replace tempData.music with API call json */
-                            tempData.music.filter(music => music.ID == this.album).map((p) => (
-                                <AlbumRev
-                                    key={this.album}
-                                    img={p.AlbumArt}
-                                    title={p.Title}
-                                    artist={p.Artist}
-                                    duration={p.Duration}
-                                    release_date={p.Release_date}
-                                    genre={p.Genre}
-                                    MusicID={this.album}
-                                    UserID={this.state.UserID}
-                                />
-                            ))}
+
+                        <AlbumRev
+                            key={this.state.MusicID}
+                            img={this.state.album_Art}
+                            title={this.state.album_Title}
+                            artist={this.state.album_Artist}
+                            duration={this.state.album_Duration}
+                            release_date={this.state.release_Date}
+                            genre={this.state.album_Genre}
+                            MusicID={this.state.MusicID}
+                        />
                     </GridListTile>
                     {reviewed ?
-                        <GridList id='MenuRevLeft' cellHeight={'auto'}>
+                        <GridList className='MenuRevLeft' cellHeight={'auto'}>
                             <div className="UserReviewedList" >
-                                <ReviewedList album={this.album} />
+                                <ReviewedList album={this.state.MusicID} />
                             </div>
                         </GridList> :
                         <GridListTile cellHeight={'auto'} className="MenuRevForm">
@@ -199,7 +226,7 @@ class MenuRev extends Component {
                                 </div>
                             </Form>
                             <div className="ReviewsList">
-                                <ReviewedList album={this.album} />
+                                <ReviewedList album={this.state.MusicID} />
                             </div>
                         </GridListTile>
                     }

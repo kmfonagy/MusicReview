@@ -3,7 +3,6 @@ import { Link, Redirect } from "react-router-dom"
 import Form from "react-bootstrap/Form";
 import { Button } from '@material-ui/core';
 import "./login.css";
-import { RepeatOneSharp } from "@material-ui/icons";
 
 const loginUser = async (username) => {
     const url = `/api/getByUsername/${username.username}`

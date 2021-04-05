@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Album from './Album';
-import { Button, GridList, GridListTile } from '@material-ui/core';
+import { GridList, GridListTile } from '@material-ui/core';
 import { Dropdown } from 'react-bootstrap';
 import './MenuAlbums.css';
 
@@ -10,9 +10,13 @@ class MenuAlbums extends Component {
         super(props);
         this.state = {
             searchQuery: "",
-            albums: []
+            albums: [],
+            width: window.innerWidth,
+            columns: 0
         }
 
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+        this.handleInputChanged = this.handleInputChanged.bind(this)
         this.UserID = this.props.UserID
         this.value = 0;
         
@@ -31,6 +35,89 @@ class MenuAlbums extends Component {
         }).catch((error) => {
             console.log(error);
         });
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+        
+        if(this.state.width >= 2231) {
+            this.setState({
+                columns: 12
+            })
+        }
+        if(this.state.width <= 2230) {
+            this.setState({
+                columns: 11
+            })
+        }
+        if(this.state.width <= 2080) {
+            this.setState({
+                columns: 10
+            })
+        }
+        if(this.state.width <= 1920) {
+            this.setState({
+                columns: 9
+            })
+        }
+        if(this.state.width <= 1730) {
+            this.setState({
+                columns: 8
+            })
+        }
+        if(this.state.width <= 1570) {
+            this.setState({
+                columns: 7
+            })
+        }
+        if(this.state.width <= 1410) {
+            this.setState({
+                columns: 6
+            })
+        }
+        console.log("Window width at mount end " + this.state.width)
+        
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+      
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth });
+        if(this.state.width >= 2231) {
+            this.setState({
+                columns: 12
+            })
+        }
+        if(this.state.width <= 2230) {
+            this.setState({
+                columns: 11
+            })
+        }
+        if(this.state.width <= 2080) {
+            this.setState({
+                columns: 10
+            })
+        }
+        if(this.state.width <= 1920) {
+            this.setState({
+                columns: 9
+            })
+        }
+        if(this.state.width <= 1730) {
+            this.setState({
+                columns: 8
+            })
+        }
+        if(this.state.width <= 1570) {
+            this.setState({
+                columns: 7
+            })
+        }
+        if(this.state.width <= 1410) {
+            this.setState({
+                columns: 6
+            })
+        }
     }
 
     handleInputChanged(event) {
@@ -116,13 +203,14 @@ class MenuAlbums extends Component {
         const value = this.state.searchQuery.toLowerCase();
         const albums = this.state.albums.filter(album => {
             if (!value) return true
-            if (album.Title.toLowerCase().includes(value) || album.Artist.toLowerCase().includes(value)) {
+            if (album.title.toLowerCase().includes(value) || album.artist.toLowerCase().includes(value)) {
                 return true
             }
         }).map((album) => (
             <GridListTile key={album.id}>
                 <Album
                     key={album.id}
+                    id={album.id}
                     title={album.title}
                     artist={album.artist}
                     img={album.album_Art}
@@ -141,7 +229,7 @@ class MenuAlbums extends Component {
                                 className='MenuInput'
                                 type="text"
                                 value={this.state.searchQuery}
-                                onChange={this.handleInputChanged.bind(this)}
+                                onChange={this.handleInputChanged}
                             />
                         </div>
                         <div className="MenuFilter">
@@ -164,7 +252,7 @@ class MenuAlbums extends Component {
                         </div>
                     </div>
                 </div>
-                <GridList cellHeight={'auto'} className='MenuAlbumList' cols={12}>
+                <GridList cellHeight={'auto'} className='MenuAlbumList' cols={this.state.columns}>
                     {albums}
                 </GridList>
             </div>

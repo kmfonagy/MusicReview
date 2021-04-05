@@ -1,10 +1,36 @@
 import React, { Component } from 'react';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import tempUsers from '../tempUsers.json';
 import './SideFavs.css'
 
 class SideFavs extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: "",
+        }
+        
+    }
+
+    componentDidMount() {
+        Promise.all([
+            fetch('/api/getAllUsers').then(res => res.json())
+        ]).then(([allUsers]) => {
+            console.log(allUsers)
+            for(let i = 0; 0 < allUsers.length; i++){
+                if(allUsers[i].id == this.props.UserID){
+                    console.log(allUsers[i].id, this.props.UserID)
+                    this.setState({
+                        user: allUsers[i].name
+                    })
+                    console.log("User name is " + this.state.user)
+                }
+            }
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
     render() {
         return (
             <div className="SideFavs">
@@ -24,9 +50,7 @@ class SideFavs extends Component {
 
                 </div>
                 <div className="LoginFavBtns">
-                    {tempUsers.user.filter(user => user.ID == this.props.UserID).map((user) => (
-                        user.Username
-                    ))}
+                    <Typography>{this.state.user}</Typography>
                     <Link to="/" style={{ textDecoration: 'none', backgroundColor: 'inherit' }}>
                         <Button variant="contained" color="secondary">
                             logout

@@ -1,6 +1,4 @@
-import { ThreeSixtySharp } from '@material-ui/icons';
 import React, { Component } from 'react';
-import tempFavs from '../tempFavs.json';
 import Heart from './Heart';
 
 const addFavoritePost = async values => {
@@ -25,13 +23,13 @@ class ReviewHeart extends Component {
         this.state = {
             dynamicValue: props.value,
             value: 0,
-            userID: this.props.UserID,
-            musicID: this.props.album,
+            userID: localStorage.getItem("userID"),
+            musicID: localStorage.getItem('albumID'),
             favID: 0,
             faved: false
         };
 
-
+        console.log("ReviewHeart MusicID " + this.state.musicID)
         this.handleClick = this.handleClick.bind(this);
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -42,7 +40,7 @@ class ReviewHeart extends Component {
             fetch('/api/getFavoriteByUserId/' + this.state.userID).then(res => res.json())
         ]).then(([favs]) => {
             for (let i = 0; i < favs.length; i++) {
-                if (this.state.musicID === favs[i].musicID) {
+                if (this.state.musicID == favs[i].musicID) {
                     this.setState(
                         {
                             value: 1,
