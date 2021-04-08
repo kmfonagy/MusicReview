@@ -96,8 +96,8 @@ class Login extends Component {
                 <Form className="LoginForm" onSubmit={this.handleSubmit}>
                     {
                         this.state.error &&
-                        <h4 onClick={this.dismissError}> {this.state.error}
-                        </h4>
+                        <div className="LoginError" onClick={this.dismissError}> {this.state.error}
+                        </div>
                     }
                     <div className="LoginHeader">
                         <div className="LoginHeaderTitle">

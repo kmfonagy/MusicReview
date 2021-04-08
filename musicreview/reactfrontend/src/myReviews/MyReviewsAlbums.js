@@ -32,7 +32,8 @@ class MyReviewsAlbums extends Component {
                             title: albs[i].title,
                             artist: albs[i].artist,
                             album_Art: albs[i].album_Art,
-                            genre: albs[i].genre
+                            genre: albs[i].genre,
+                            release_Date: albs[i].release_Date
                         })
                     }
                 }
@@ -143,7 +144,8 @@ class MyReviewsAlbums extends Component {
                                 title: albs[i].title,
                                 artist: albs[i].artist,
                                 album_Art: albs[i].album_Art,
-                                genre: albs[i].genre
+                                genre: albs[i].genre,
+                                release_Date: albs[i].release_Date
                             })
                         }
                     }
@@ -172,7 +174,8 @@ class MyReviewsAlbums extends Component {
                                 title: albs[i].title,
                                 artist: albs[i].artist,
                                 album_Art: albs[i].album_Art,
-                                genre: albs[i].genre
+                                genre: albs[i].genre,
+                                release_Date: albs[i].release_Date
                             })
                         }
                     }
@@ -192,7 +195,8 @@ class MyReviewsAlbums extends Component {
                                 title: filterMusic[i].title,
                                 artist: filterMusic[i].artist,
                                 album_Art: filterMusic[i].album_Art,
-                                genre: filterMusic[i].genre
+                                genre: filterMusic[i].genre,
+                                release_Date: filterMusic[i].release_Date
                             })
                         }
                     }
@@ -206,7 +210,8 @@ class MyReviewsAlbums extends Component {
                             title: filterMusic[i].title,
                             artist: filterMusic[i].artist,
                             album_Art: filterMusic[i].album_Art,
-                            genre: filterMusic[i].genre
+                            genre: filterMusic[i].genre,
+                            release_Date: filterMusic[i].release_Date
                         })
                     }
                 }
@@ -237,6 +242,7 @@ class MyReviewsAlbums extends Component {
             { name: "Christian", value: "Christian" },
             { name: "Classic Rock", value: "Classic Rock" },
             { name: "Classical", value: "Classical" },
+            { name: "Comedy", value: "Comedy" },
             { name: "Country", value: "Country" },
             { name: "Dance", value: "Dance" },
             { name: "Electronic", value: "Electronic" },

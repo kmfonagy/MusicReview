@@ -106,7 +106,7 @@ class MenuRev extends Component {
             {
                 [keyName]: event.target.value,
                 rating: this.state.dynamicValue,
-                created_on: new Date().getMonth() + '/' + new Date().getDate() + '/' + new Date().getFullYear(),
+                created_on: (new Date().getMonth() + 1) + '/' + new Date().getDate() + '/' + new Date().getFullYear(),
                 MusicID: this.state.MusicID
             }
         )

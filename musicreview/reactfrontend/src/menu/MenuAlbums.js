@@ -183,6 +183,7 @@ class MenuAlbums extends Component {
             { name: "Christian", value: "Christian" },
             { name: "Classic Rock", value: "Classic Rock" },
             { name: "Classical", value: "Classical" },
+            { name: "Comedy", value: "Comedy" },
             { name: "Country", value: "Country" },
             { name: "Dance", value: "Dance" },
             { name: "Electronic", value: "Electronic" },
