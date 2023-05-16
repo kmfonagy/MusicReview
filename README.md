@@ -8,7 +8,10 @@ The Music Review app allows users to be able to rate & review albums, as well as
 
 Video Capture for Presentation
 
-[Embed Title](http://www.fonagyessentials.com/classRelated/music_review_video_capture.mp4 "@embed")
+<figure class="video_container">
+  <iframe src="music_review_video_capture.mp4" frameborder="0" allowfullscreen="true"> 
+</iframe>
+</figure>
 
 
 Tech Stack: 
