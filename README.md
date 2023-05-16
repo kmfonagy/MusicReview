@@ -6,10 +6,7 @@ Project: Music Review
 
 The Music Review app allows users to be able to rate & review albums, as well as favorite albums. 
 
-Video Capture for Presentation
-
-https://github.com/kmfonagy/MusicReview/blob/main/music_review_video_capture.mp4
-
+[Video Capture for Presentation](http://www.fonagyessentials.com/classRelated/music_review_video_capture)
 
 Tech Stack: 
   1. Backend: Maven, Java
